@@ -7,10 +7,31 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./header/Header"
+import Footer from "./footer/Footer"
+// import "./layout.css"
+import GlobalStyle from "./globalStyle";
+
+const StyledLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  main {
+    /* max-width: 1280px;
+    width: 100%;
+    margin: 0 auto; */
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+  `;
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,27 +45,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <StyledLayout>
+      <GlobalStyle theme="purple" />
+
+      <Header />
+
+      <main>
+        {children}
+      </main>
+
+      <Footer />
+    </StyledLayout>
   )
 }
 
