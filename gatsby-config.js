@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Stray Vyrje`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -16,6 +16,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-transformer-remark`
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -25,6 +28,33 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `gudea`,
+          `roboto\:300,400,500`
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `i89160zwngho`,
+        accessToken: `uSeoOKG_oPLRGiclTSV58bnjMzhydzr3utWxaENkOKQ`,
+        downloadLocal: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
