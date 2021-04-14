@@ -8,11 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header/Header"
 import Footer from "./footer/Footer"
-// import "./layout.css"
 import GlobalStyle from "./globalStyle";
 
 const StyledLayout = styled.div`
@@ -21,9 +19,6 @@ const StyledLayout = styled.div`
   min-height: 100%;
 
   main {
-    /* max-width: 1280px;
-    width: 100%;
-    margin: 0 auto; */
     flex: 1 0 auto;
   }
 
@@ -34,16 +29,6 @@ const StyledLayout = styled.div`
 
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <StyledLayout>
       <GlobalStyle theme="purple" />

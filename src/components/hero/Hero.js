@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledHero, Container, Card, Title, Actions, Action } from './Hero.styled';
 
-
 const Hero = () => {
   return (
     <StyledHero>

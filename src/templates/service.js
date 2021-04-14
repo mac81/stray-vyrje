@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { graphql } from "gatsby"
 import { Service as ServiceDetail } from "../components/service/Service";
 
 const Service = ({ data }) => {
@@ -31,6 +30,7 @@ query ServiceById($id: String!) {
       raw
     }
     lawyers {
+      slug
       name
       id
       profileImage {

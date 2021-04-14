@@ -13,6 +13,7 @@ const Advokatene = () => {
         subTitle
         lawyersList {
           id
+          slug
           name
           profileImage {
             fluid(maxWidth: 980) {

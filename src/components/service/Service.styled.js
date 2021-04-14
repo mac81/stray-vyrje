@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from 'gatsby';
 import { colors } from "../../utils/colors";
-import { Heading5 } from "../../utils/typography";
+import { Heading2, Heading4, Heading5 } from "../../utils/typography";
+import { spacing } from "../../utils/spacing";
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -23,6 +24,14 @@ export const Sidebar = styled.div`
 export const Content = styled.div`
   background-color: #fff;
   padding: 30px 60px;
+`;
+
+export const PrimaryTitle = styled(Heading2)`
+  margin: 0 0 ${spacing.xlarge};
+`;
+
+export const SecondaryTitle = styled(Heading4)`
+  margin: 0 0 ${spacing.xlarge};
 `;
 
 export const Excerpt = styled.div`
@@ -58,4 +67,10 @@ export const ServiceLink = styled(Link)`
       border-color: ${colors.highlight};
     }
   
+`;
+
+export const Lawyers = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: ${spacing.xxlarge};
 `;

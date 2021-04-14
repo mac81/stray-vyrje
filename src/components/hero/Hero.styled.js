@@ -5,11 +5,25 @@ import { spacing } from "../../utils/spacing";
 import { Heading3 } from "../../utils/typography"
 
 export const StyledHero = styled.div`
-  height: 60vh;
+  position: relative;
+  height: 80vh;
   padding: ${spacing.medium};
   display: flex;
   align-items: center;
   background: ${colors.primary};
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSJhHT10TPxXs4_5AXIgPSEJXLxi7spx2k0Q&usqp=CAU");
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(33, 37, 50, 0.97);
+    z-index: 1;
+  }
 `;
 
 export const Container = styled.div`
@@ -19,7 +33,9 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  /* max-width: 50vw; */
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 `;
 
 export const Title = styled(Heading3)`

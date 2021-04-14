@@ -1,28 +1,21 @@
 import React from 'react';
-import { Container, PageTitle, PageSubTitle, Cards, Card, CardName } from './Lawyers.styled';
-import { useStaticQuery, graphql } from "gatsby"
+import { Page, PageTitle, PageSubTitle, Cards, Card, CardName } from './Lawyers.styled';
 import Img from "gatsby-image"
 
-
-const Lawyers = ({ data }) => {
-
+const Lawyers = ({ data: { title, lawyersList } }) => {
   return (
-    <Container>
-      <PageTitle>{data.title}</PageTitle>
+    <Page>
+      <PageTitle>{title}</PageTitle>
       <PageSubTitle>We aim to lead in each practice and area of law we work in</PageSubTitle>
       <Cards>
-        {data.lawyersList.map(lawyer => (
-          <Card key={lawyer.id} to={`/advokater/${lawyer.id}`}>
-            {lawyer.profileImage && <Img fluid={lawyer.profileImage.fluid} />}
-            <CardName>{lawyer.name}</CardName>
+        {lawyersList.map(({ id, slug, profileImage, name }) => (
+          <Card key={id} to={`/advokater/${slug}`}>
+            {profileImage && <Img fluid={profileImage.fluid} />}
+            <CardName>{name}</CardName>
           </Card>
         ))}
-
-
-
       </Cards>
-
-    </Container>
+    </Page>
   )
 }
 

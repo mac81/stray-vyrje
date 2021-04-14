@@ -1,11 +1,10 @@
 
 import React from 'react';
-import { Heading2, Heading4, Heading5, Heading6, Text } from '../../utils/typography';
-import { Wrapper, Container, Sidebar, ServicesMenu, ServiceLink, Content, ServicesMenuTitle, Excerpt } from './Service.styled';
+import { Wrapper, Container, Sidebar, ServicesMenu, ServiceLink, Content, PrimaryTitle, SecondaryTitle, ServicesMenuTitle, Excerpt, Lawyers } from './Service.styled';
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from "gatsby-image"
-
-
+import LawyerCard from '../lawyerCard/LawyerCard';
+import { Heading2 } from '../../utils/typography';
 
 export const Service = ({ details, services }) => {
   console.log(details)
@@ -25,7 +24,7 @@ export const Service = ({ details, services }) => {
 
         </Sidebar>
         <Content>
-          <h1>{details.name}</h1>
+          <PrimaryTitle as="h1">{details.name}</PrimaryTitle>
           <Excerpt
             dangerouslySetInnerHTML={{
               __html: details.excerpt.childMarkdownRemark.html,
@@ -34,12 +33,12 @@ export const Service = ({ details, services }) => {
 
           {details.body && renderRichText(details.body)}
 
-          <h2>Våre advokater innen {details.name}</h2>
-          <div>
+          <SecondaryTitle as="h2">Våre advokater innen {details.name}</SecondaryTitle>
+          <Lawyers>
             {details.lawyers.map(lawyer => (
-              <div>{lawyer.name}</div>
+              <LawyerCard lawyer={lawyer} />
             ))}
-          </div>
+          </Lawyers>
 
         </Content>
       </Container>

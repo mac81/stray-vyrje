@@ -14,24 +14,25 @@ import Img from "gatsby-image"
  */
 
 const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "advokat-magnus-stray-vyrje.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-    }
-  `)
+  return null;
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     placeholderImage: file(relativePath: { eq: "advokat-magnus-stray-vyrje.jpeg" }) {
+  //       childImageSharp {
+  //         GatsbyContentfulFluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid
+  //           ...GatsbyImageSharpFluidLimitPresentationSize
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
-  }
+  // if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  //   return <div>Picture not found</div>
+  // }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  // return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default Image

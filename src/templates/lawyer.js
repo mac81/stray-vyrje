@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { graphql } from "gatsby"
 import { Lawyer as LawyerDetail } from "../components/lawyer/Lawyer";
 
 const Lawyer = ({ data }) => {
@@ -16,8 +15,8 @@ const Lawyer = ({ data }) => {
 }
 
 export const query = graphql`
-query LawyerById($id: String!) {
-  contentfulAdvokat(id: { eq: $id }) {
+query LawyerBySlug($slug: String!) {
+  contentfulAdvokat(slug: { eq: $slug }) {
     name
     phoneNumber
     email

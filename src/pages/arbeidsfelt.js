@@ -13,7 +13,16 @@ const Advokatene = () => {
         services {
           id
           name
-          
+          excerpt {
+            childMarkdownRemark {
+              html
+            }
+          }
+          icon {
+            fluid(maxWidth: 980) {
+              ...GatsbyContentfulFluid
+           }
+          }
         }
       }
     }

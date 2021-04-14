@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heading2, Heading4, Heading5, Heading6, Text } from '../../utils/typography';
+import { Heading2, Heading5, Heading6, Text } from '../../utils/typography';
 import { Wrapper, Container, Sidebar, Menu, MenuItem, Content } from './Article.styled';
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
