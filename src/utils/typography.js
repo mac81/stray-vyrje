@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-export const HEADER_FONT_FAMILY = "Gudea";
-export const BODY_FONT_FAMILY = "Roboto";
+export const HEADER_FONT_FAMILY = "Roboto";
+export const BODY_FONT_FAMILY = "Gudea";
 
 export const FONT_SIZE = {
   HEADING_1: "3.052rem",
@@ -27,7 +27,7 @@ export const StyledText = ({
   fontFamily = BODY_FONT_FAMILY,
   fontSize = FONT_SIZE.TEXT,
   fontWeight = FONT_WEIGHT.NORMAL,
-  lineHeight = 1.3,
+  lineHeight = 1.6,
 }) => css`
   font-family: ${fontFamily};
   font-size: ${fontSize};

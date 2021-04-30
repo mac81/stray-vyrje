@@ -7,6 +7,7 @@ import Menu from "../menu/Menu";
 import useOnClickOutside from "../../utils/hooks/useOnClickOutside"
 
 import { StyledHeader, Container, Logo, MenuContainer } from "./Header.styled";
+import Language from "../language/Language";
 
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false);
@@ -22,11 +23,15 @@ const Header = ({ siteTitle }) => {
             <Logo src={logo} />
             {siteTitle}
           </Link>
-          <MenuContainer ref={node}>
-            <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} setOpen={setOpen} />
-          </MenuContainer>
+          <div>
+            <Language />
+            <MenuContainer ref={node}>
+              <Burger open={open} setOpen={setOpen} />
+              <Menu open={open} setOpen={setOpen} />
+            </MenuContainer>
+          </div>
         </Container>
+
 
       </StyledHeader>
 

@@ -2,17 +2,18 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { spacing } from "../../utils/spacing";
-import { Heading3 } from "../../utils/typography"
+import { FONT_SIZE, Heading3, StyledText, BODY_FONT_FAMILY } from "../../utils/typography"
 
 export const StyledHero = styled.div`
   position: relative;
-  height: 80vh;
+  height: 60vh;
   padding: ${spacing.medium};
   display: flex;
   align-items: center;
   background: ${colors.primary};
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSJhHT10TPxXs4_5AXIgPSEJXLxi7spx2k0Q&usqp=CAU");
   background-size: cover;
+  background-position: center;
 
   &:after {
     content: "";
@@ -38,12 +39,15 @@ export const Card = styled.div`
   max-width: 800px;
 `;
 
-export const Title = styled(Heading3)`
+export const Title = styled.h1`
+${StyledText({ fontSize: FONT_SIZE.HEADING_6 })};
  color: ${colors.textInverted};
+ text-align: center;
 `;
 
 export const Actions = styled.div`
   display: flex;
+  justify-content: space-evenly;
 `;
 
 export const Action = styled(Link)`
@@ -53,8 +57,8 @@ export const Action = styled(Link)`
   text-transform: uppercase;
   border-bottom: 2px solid ${colors.highlight};
   font-weight: 500;
-  letter-spacing: 2px;
-  font-family: "Roboto";
-  margin-right: 30px;
+  letter-spacing: 1px;
+  ${StyledText({ fontSize: FONT_SIZE.TEXT })};
+  /* margin-right: 30px; */
 `;
 

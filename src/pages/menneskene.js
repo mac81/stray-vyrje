@@ -3,9 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Lawyers from "../components/lawyers/Lawyers"
 import { useStaticQuery, graphql } from "gatsby"
+import Page, { PageTitle } from "../components/page";
 
 
-const Advokatene = () => {
+const Menneskene = () => {
   const data = useStaticQuery(graphql`
     {
       contentfulSideAdvokater {
@@ -28,9 +29,13 @@ const Advokatene = () => {
   return (
     <Layout>
       <SEO title="Advokatene" />
-      <Lawyers data={data.contentfulSideAdvokater} />
+      <Page>
+        <PageTitle>{data.contentfulSideAdvokater.title}</PageTitle>
+        <Lawyers data={data.contentfulSideAdvokater} />
+      </Page>
+
     </Layout>
   )
 }
 
-export default Advokatene
+export default Menneskene

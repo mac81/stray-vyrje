@@ -58,19 +58,27 @@ module.exports = {
         downloadLocal: true,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-intl`,
-    //   options: {
-    //     // language JSON resource path
-    //     path: `${__dirname}/src/intl`,
-    //     // supported language
-    //     languages: [`en`, `nb`],
-    //     // language file path
-    //     defaultLanguage: `nb`,
-    //     // option to redirect to `/en` when connecting `/`
-    //     redirect: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `nb`],
+        // language file path
+        defaultLanguage: `nb`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: true,
+      },
+    },
+    {
+      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+      options: {
+        key: `AIzaSyCBVWXh_ooq1ZdpuFLeNGU6-a4lzN0nEUY`,
+        center: `Oslo`,
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

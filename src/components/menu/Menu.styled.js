@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/colors';
+import { FONT_SIZE, StyledText } from '../../utils/typography';
+import { device } from "../../utils/mediaqueries"
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -12,15 +14,20 @@ export const StyledMenu = styled.nav`
   text-align: left;
   padding: 2rem;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
  
       width: 100%;
+
+      /* @media ${device.laptop} {
+        width: 50vw;
+  } */
  
   a {
-    font-size: 2rem;
+    ${StyledText({ fontSize: FONT_SIZE.TEXT })};
+    
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;

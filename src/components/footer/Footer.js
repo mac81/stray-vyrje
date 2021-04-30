@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledFooter, Container, Section, Logo, SectionTitle, SectionContent } from "./Footer.styled";
+import { StyledFooter, Container, Section, Logo, SectionTitle, SectionContent, InputWrapper, Input, Button } from "./Footer.styled";
 import logo from "../../images/logo.png";
 import { Link } from "gatsby"
 
@@ -19,22 +19,21 @@ const Footer = () => {
           </SectionContent>
         </Section>
         <Section>
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
+          <SectionTitle as="h3">Vi ringer deg opp!</SectionTitle>
+          <p>Vi vil kontakte deg i løpet av dagen mellom 08:15 - 15:45 på hverdager.</p>
+          <SectionContent>
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <Input type="text" placeholder="Navn *" name="name" required />
+              <Input type="text" placeholder="E-post" name="email" />
 
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+              <Input type="text" placeholder="Telefonnummer *" name="telephone" required />
+
+
+              <Button type="submit">Send</Button>
+
+            </form>
+          </SectionContent>
         </Section>
       </Container>
     </StyledFooter>

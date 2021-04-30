@@ -4,8 +4,10 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { Lawyer as LawyerDetail } from "../components/lawyer/Lawyer";
 
-const Lawyer = ({ data }) => {
+const Lawyer = ({ data, location }) => {
   const lawyerData = data.contentfulAdvokat;
+  console.log(lawyerData)
+
   return (
     <Layout>
       <SEO title="Advokat" />
@@ -15,8 +17,8 @@ const Lawyer = ({ data }) => {
 }
 
 export const query = graphql`
-query LawyerBySlug($slug: String!) {
-  contentfulAdvokat(slug: { eq: $slug }) {
+query LawyerBySlug($slug: String!, $locale: String) {
+  contentfulAdvokat(slug: { eq: $slug }, node_locale: {eq: $locale}) {
     name
     phoneNumber
     email

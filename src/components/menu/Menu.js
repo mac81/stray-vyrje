@@ -11,9 +11,10 @@ const Menu = ({ open, ...props }) => {
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <Link to="/">Forside</Link>
       <Link to="/arbeidsfelt">Arbeidsfelt</Link>
-      <Link to="/advokater">Advokatene</Link>
+      <Link to="/menneskene">Menneskene</Link>
+      <Link to="/kontakt">Kontakt oss</Link>
       <Link to="/omoss">Om oss</Link>
-      <Link to="/nyheter">Nyheter</Link>
+      {/* <Link to="/nyheter">Nyheter</Link> */}
     </StyledMenu>
   )
 }

@@ -9,7 +9,8 @@ const Hero = () => {
           <Title as="h1">Vi bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder.</Title>
           <Actions>
             <Action to="/arbeidsfelt">Arbeidsfelt</Action>
-            <Action to="/advokater">Advokatene</Action>
+            <Action to="/menneskene">Menneskene</Action>
+            {/* <Action to="/kontakt">Kontakt oss</Action> */}
           </Actions>
         </Card>
       </Container>
