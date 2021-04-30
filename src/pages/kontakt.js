@@ -113,17 +113,7 @@ const Button = styled.button`
 
 
 const ContactPage = () => {
-  const data = useStaticQuery(graphql`
-query StaticMapQuery {
-  staticMap {
-      childFile {
-          childImageSharp {
-            gatsbyImageData(layout: FIXED)
-          }
-      }
-  }
-}
-`)
+
 
 
   return (
