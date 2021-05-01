@@ -7,7 +7,6 @@ import LawyerCard from '../lawyerCard/LawyerCard';
 import { Heading2 } from '../../utils/typography';
 
 export const Service = ({ details, services }) => {
-  console.log(details)
   return (
     <Wrapper>
       <Container>

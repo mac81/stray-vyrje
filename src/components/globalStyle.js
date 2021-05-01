@@ -1,4 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { spacing } from "../utils/spacing";
+import { device } from "../utils/mediaqueries";
+import { colors } from "../utils/colors";
+import { FONT_SIZE, StyledText } from "../utils/typography";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -64,6 +68,7 @@ template {
   display: none;
 }
 a {
+  color: ${colors.highlight};
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -90,32 +95,30 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 3rem 0 1.38rem;
-  font-family: "Gudea", sans-serif;
-  font-weight: 400;
-  line-height: 1.3;
-  text-rendering: optimizeLegibility;
+  margin: 0 0 ${spacing.large} 0;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 3.052rem;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
+  @media ${device.tablet} {
+    font-size: ${FONT_SIZE.HEADING_3};
+  }
 }
 
 h2 {
-  font-size: 2.441rem;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_2 })};
 }
 
 h3 {
-  font-size: 1.953rem;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_3 })};
 }
 
 h4 {
-  font-size: 1.563rem;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_4 })};
 }
 
 h5 {
-  font-size: 1.25rem;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
 }
 
 small,
