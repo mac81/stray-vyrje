@@ -1,42 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Lawyers from "../components/lawyers/Lawyers"
-import { useStaticQuery, graphql } from "gatsby"
+import Seo from "../components/seo"
+
 
 import styled from "styled-components";
-import { FONT_SIZE, Heading6, StyledText } from "../utils/typography"
+import { FONT_SIZE, StyledText } from "../utils/typography"
 import { device } from "../utils/mediaqueries"
 import { spacing } from "../utils/spacing";
 import { colors } from "../utils/colors"
-
-
-const Page = styled.div`
-  background-color: #f5f5f5;
-`;
-
-const PageTitle = styled.h1`
-  ${StyledText({ fontSize: FONT_SIZE.HEADING_2 })};
-`;
+import Page, { PageContent, PageHeader, PageTitle } from "../components/page";
+import ContactForm from "../components/contactForm/ContactForm";
 
 const Section = styled.section`
   background: ${props => props.version === "dark" ? colors.primary : "#fff"};
-`;
-
-const SectionContent = styled.section`
-  width: 100%;
-  padding: ${spacing.large};
-  ${StyledText({ fontSize: FONT_SIZE.TEXT })};
-
-  @media ${device.laptop} {
-    max-width: 1280px;
-    margin: 0 auto;
-  padding: ${spacing.xxxlarge} 0;
-  }
-
-  a {
-    color: ${colors.highlight};
-  }
 `;
 
 const SectionTitle = styled.h2`
@@ -64,27 +40,18 @@ const SectionTitle = styled.h2`
   }
 `;
 
-
 const SubTitle = styled.h3`
   ${StyledText({ fontSize: FONT_SIZE.HEADING_6 })};
-
   margin: 0 0 ${spacing.large} 0;
- 
   text-transform: uppercase;
   
-
-  
-
-  @media ${device.laptop} {
-    
+  @media ${device.laptop} {  
     ${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
     margin: 0 0 ${spacing.medium} 0;
   }
 `;
 
 const SplitContainer = styled.div`
-  
-
   @media ${device.laptop} {
     display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,84 +71,16 @@ text-align: center;
   }
 `;
 
-const Input = styled.input`
-  width: 100%;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: ${spacing.xsmall};
-  
-  margin: 0 0 20px 0;
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-
-  @media ${device.laptop} {
-    padding: ${spacing.medium};
-  }
-
-  &:focus {
-    border-color: #e6e6e6;
-    outline: none;
-  }
-`;
-
-const Textarea = styled.textarea`
-  width: 100%;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: ${spacing.medium};
-  
-  margin: 0 0 20px 0;
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-  resize:vertical;
-
-  &:focus {
-    border-color: #e6e6e6;
-    outline: none;
-  }
-`;
-
-
-const Button = styled.button`
-  border: none;
-  border-radius: 5px;
-  padding: ${spacing.xsmall} ${spacing.xlarge};
-  background-color: ${colors.highlight};
-  color: #fff;
-  
-  @media ${device.laptop} {
-    padding: ${spacing.small} ${spacing.xlarge};
-  }
-`;
-
 const Menneskene = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     contentfulSideAdvokater {
-  //       title
-  //       subTitle
-  //       lawyersList {
-  //         id
-  //         slug
-  //         name
-  //         profileImage {
-  //           fluid(maxWidth: 980) {
-  //             ...GatsbyContentfulFluid
-  //          }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <Layout>
-      <SEO title="Om oss" />
+      <Seo title="Om oss" />
       <Page>
-        <SectionContent>
+        <PageHeader>
           <PageTitle>Om oss</PageTitle>
+        </PageHeader>
+        <PageContent>
+
           <SplitContainer>
             <div>
               <p>
@@ -204,20 +103,13 @@ const Menneskene = () => {
             <div>
               <SubTitle>Trenger du hjelp?</SubTitle>
               <p>Legg igjen en beskjed så vil vi kontakte deg mellom 08:15 - 15:45 på hverdager.</p>
-              <form>
-
-                <Input type="text" placeholder="Navn" />
-                <Input type="text" placeholder="Epost *" required />
-                <Input type="text" placeholder="Telefon" />
-                <Textarea placeholder="Melding"></Textarea>
-                <Button>Send</Button>
-              </form>
+              <ContactForm />
             </div>
           </SplitContainer>
-        </SectionContent>
+        </PageContent>
 
         <Section version="dark">
-          <SectionContent>
+          <PageContent>
             <SectionTitle version="dark">Verdier</SectionTitle>
             <Test>
               <p>I møte med Stray Vyrje vil du raskt oppdage at våre kjerneverdier: Kvalitet, integritet og
@@ -226,11 +118,11 @@ const Menneskene = () => {
               på bekostning av vår yrkesmessige eller personlige integritet og vi strekker oss langt for å alltid
 kunne være til stede for både kollegaer og klienter.</p>
             </Test>
-          </SectionContent>
+          </PageContent>
         </Section>
 
         <Section>
-          <SectionContent>
+          <PageContent>
             <SectionTitle>Miljø og samfunnsansvar</SectionTitle>
             <SplitContainer>
               <div>
@@ -251,7 +143,7 @@ slumområdene med personlig utvikling, utdanning og utfoldelse.</p>
                 <p>Les mer om Karanba her: <a href="http://www.karanba.com">www.karanba.com</a></p>
               </div>
             </SplitContainer>
-          </SectionContent>
+          </PageContent>
         </Section>
 
 

@@ -1,7 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { FONT_SIZE, FONT_WEIGHT, Heading4, Heading6, StyledText, Text } from "../../utils/typography"
-import Test from "../../icons/science.svg"
 import { device } from "../../utils/mediaqueries"
 import { spacing } from "../../utils/spacing";
 import { colors } from "../../utils/colors";
@@ -100,14 +99,18 @@ export const CardIcon = styled.div`
 export const CardTitle = styled(Heading6)`
   text-transform: uppercase;
   margin: 0 0 ${spacing.large} 0;
-  color: rgba(255,255,255,0.87);
-  font-weight: 600;
+  color: ${colors.textInverted};
+  font-weight: 500;
 `;
 
 export const CardSummary = styled(Text)`
   text-align: center;
-  margin: 0 0 ${spacing.large} 0;
-  color: rgba(255,255,255,0.87);
+  /* margin: 0 0 ${spacing.large} 0; */
+  color: ${colors.textInvertedOp1};
+
+  p {
+    margin: 0;
+  }
 `;
 
 export const CardLink = styled.div`

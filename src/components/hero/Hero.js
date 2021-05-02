@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyledHero, Container, Card, Title, Actions, Action } from './Hero.styled';
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
-const Hero = () => {
+const Hero = ({ intl }) => {
   return (
     <StyledHero>
       <Container>
         <Card>
-          <Title as="h1">Vi bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder.</Title>
+          <Title as="h1"><FormattedMessage id="hero" /></Title>
           <Actions>
-            <Action to="/arbeidsfelt">Arbeidsfelt</Action>
-            <Action to="/menneskene">Menneskene</Action>
-            {/* <Action to="/kontakt">Kontakt oss</Action> */}
+            <Action to="/arbeidsfelt"><FormattedMessage id="menu.services" /></Action>
+            <Action to="/menneskene"><FormattedMessage id="menu.peoples" /></Action>
+            <Action to="/kontakt"><FormattedMessage id="menu.contact" /></Action>
           </Actions>
         </Card>
       </Container>
@@ -18,4 +19,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default injectIntl(Hero);

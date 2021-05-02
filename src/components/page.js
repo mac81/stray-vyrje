@@ -1,41 +1,45 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { FONT_SIZE, Heading6, StyledText } from "../utils/typography"
+import { FONT_SIZE, StyledText } from "../utils/typography"
 import { device } from "../utils/mediaqueries"
-import { spacing } from "../utils/spacing";
+import { spacing } from "../utils/spacing"
 import { colors } from "../utils/colors"
 
-const PageContainer = styled.div`
-
-    background-color: #f5f5f5;
+const StyledPage = styled.div`
+  background-color: #f5f5f5;
+  padding: ${spacing.large} 0 0 0;
 
   @media ${device.laptop} {
-    padding: ${spacing.xxlarge} ${spacing.large};
+    padding: ${spacing.xxxlarge} 0 0 0;
   }
-   `;
+`
 
-const PageContent = styled.div`
-       width: 100%;
+const StyledPageContent = styled.div`
+  width: 100%;
+  padding: ${spacing.large} ${spacing.medium};
+
+  @media ${device.laptop} {
     max-width: 1280px;
     margin: 0 auto;
-    padding: ${spacing.large} ${spacing.medium};
-    
-
-  @media ${device.laptop} {
-    padding: ${spacing.xxlarge} ${spacing.large};
+    padding: ${spacing.xxlarge} ${spacing.xxlarge};
   }
-   `;
+`
+
+export const PageHeader = styled.div`
+padding: 0 ${spacing.medium};
+  margin: 0 0 ${spacing.xlarge} 0;
+`
 
 export const PageTitle = styled.h1`
-${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
-text-align: center;
-  margin: 0 0 ${spacing.xxlarge} 0;
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
+  color: ${colors.text};
+  text-align: center;
+  margin: 0 0 ${spacing.large} 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  
 
   &:after {
     content: "";
@@ -49,27 +53,21 @@ text-align: center;
     ${StyledText({ fontSize: FONT_SIZE.HEADING_4 })};
     margin: 0 0 ${spacing.large} 0;
   }
-  
-`;
+`
 
 export const PageSubTitle = styled.h2`
-${StyledText({ fontSize: FONT_SIZE.HEADING_6 })};
-text-align: center;
-margin: 0 0 ${spacing.xxxlarge} 0;
-  
-`;
-
+  ${StyledText({ fontSize: FONT_SIZE.HEADING_6 })};
+  color: ${colors.textOp1};
+  text-align: center;
+`
 
 const Page = ({ children }) => {
-  return (
-    <PageContainer>
-      <PageContent>
-        {children}
-      </PageContent>
-    </PageContainer>
-  )
+  return <StyledPage>{children}</StyledPage>
 }
 
+export const PageContent = ({ children }) => {
+  return <StyledPageContent>{children}</StyledPageContent>
+}
 
 Page.propTypes = {
   children: PropTypes.node.isRequired,

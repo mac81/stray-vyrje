@@ -28,7 +28,7 @@ export const Container = styled.div`
 `;
 
 export const Sidebar = styled.div`
-padding: ${spacing.medium};
+padding: ${spacing.xxlarge};
  @media ${device.laptop} {
   min-height: calc(100vh - 200px);
   
@@ -42,16 +42,18 @@ export const Content = styled.div`
   padding: 30px 60px; */
   @media ${device.laptop} {
     background-color: #fff;
-    padding: ${spacing.xxxlarge};
+    padding: ${spacing.xxlarge};
   }
 `;
 
 export const PrimaryTitle = styled.h1`
   ${StyledText({ fontSize: FONT_SIZE.HEADING_3 })};
+  line-height: 1;
   margin: 0 0 ${spacing.medium};
 
   @media ${device.laptop} {
   font-size: ${FONT_SIZE.HEADING_2};
+  margin: 0 0 ${spacing.xlarge};
   }
 `;
 

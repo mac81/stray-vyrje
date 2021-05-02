@@ -1,19 +1,27 @@
 {
-  "title": "Gatsby English",
-  "description": "Project description",
-  "author": "@louisbertin",
-  "hello": "Hi people!",
-  "welcome": "Welcome to your new Gatsby site.",
-  "title_page2": "Page two",
-  "hello_page2": "Hi from the second page",
-  "go_page2": "Go to page 2",
-  "welcome_page2": "Welcome to page 2",
-  "go_back": "Go back to the homepage",
-  "footer_build": "Built with",
-  "notfound": {
-      "header": "NOT FOUND",
-      "description": "You just hit a route that doesn't exist... the sadness."
+  "hero": "We assist companies, organisations and business clients within a wide range of markets.",
+  "menu": {
+    "home": "Home",
+    "peoples": "Partners",
+    "services": "Expertise",
+    "contact": "Contact us",
+    "about": "About"
   },
-  "telephone": "Telephone",
-  "email": "E-mail"
+  "footer": {
+    "title": "Stray Vyrje assists companies, organisations and business clients within a wide range of markets. Our attorneys have extensive experience in Business and Private Law, Sports and Intellectual Property Rights.",
+    "content": {
+      "p1": "Areas of actuation comprises of Labour, Contract and Corporate Law. In addition our lawyers have significant experience with negotiation and litigation.",
+      "p2": "As a client with Stray Vyrje you will meet solution-oriented lawyers that are dedicated and available.",
+      "p3": "Contact one of our partners today, to explore what we can achieve together."
+    }
+  },
+  "contactForm": {
+    "title": "We will call you back!",
+    "subTitle": "We will contact you between 08:15 and 15:45 on weekdays.",
+    "telephone": "Telephone",
+    "email": "E-mail",
+    "name": "Name",
+    "submit": "Send"
+  }
+  
 }

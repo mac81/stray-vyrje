@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql } from "gatsby"
 import { Lawyer as LawyerDetail } from "../components/lawyer/Lawyer";
 
@@ -9,7 +9,7 @@ const Lawyer = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Advokat" />
+      <Seo title="Advokat" />
       <LawyerDetail data={lawyerData} locale={pageContext.locale} />
     </Layout>
   )

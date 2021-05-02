@@ -7,7 +7,6 @@ import en from "../../intl/en.json";
 
 
 export const Lawyer = ({ data, locale }) => {
-  console.log(en)
   return (
     <Wrapper>
       <Container>

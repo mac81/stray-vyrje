@@ -1,24 +1,23 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql } from "gatsby"
 import { Service as ServiceDetail } from "../components/service/Service";
 
 const Service = ({ data }) => {
-  console.log(data)
   const serviceData = data.contentfulArbeidsfelt;
   const servicesData = data.contentfulSideArbeidsfelt.services;
   return (
     <Layout>
-      <SEO title="Arbeidsfelt" />
+      <Seo title="Arbeidsfelt" />
       <ServiceDetail details={serviceData} services={servicesData} />
     </Layout>
   )
 }
 
 export const query = graphql`
-query ServiceById($id: String!) {
-  contentfulArbeidsfelt(id: { eq: $id }) {
+query ServiceBySlug($slug: String!, $locale: String) {
+  contentfulArbeidsfelt(slug: { eq: $slug }, node_locale: {eq: $locale}) {
     name
     id
     excerpt {
@@ -33,6 +32,7 @@ query ServiceById($id: String!) {
       slug
       name
       id
+      type
       profileImage {
         fluid(maxWidth: 980) {
           ...GatsbyContentfulFluid
@@ -40,7 +40,7 @@ query ServiceById($id: String!) {
       }
     }
   }
-  contentfulSideArbeidsfelt {
+  contentfulSideArbeidsfelt(node_locale: {eq: $locale}) {
     services {
       name
       id

@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { device } from '../../utils/mediaqueries';
+import { spacing } from '../../utils/spacing';
 
 export const StyledBurger = styled.button`
   position: absolute;
   top: 4px;
-  right: 0px;
+  right: ${spacing.medium};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -33,5 +35,9 @@ export const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
+  }
+  
+  @media ${device.desktop} {
+    right: ${spacing.xxlarge};
   }
 `;

@@ -7,7 +7,9 @@ import { device } from "../../utils/mediaqueries"
 export const StyledFooter = styled.footer`
   background-color: ${colors.secondary};
   padding: ${spacing.xlarge} ${spacing.medium};
-  
+  @media ${device.laptop} {
+    padding: ${spacing.xxxlarge} 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -21,6 +23,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 100px;
+  padding: 0 ${spacing.xxlarge};
   }
 `
 
@@ -31,12 +34,20 @@ export const Section = styled.div`
     margin: 0;
   }
 p {
-  color: #fff;
+  color: ${colors.textInverted};
   ${StyledText({ fontSize: FONT_SIZE.SMALL })};
 }
 `
 
-export const SectionTitle = styled(Text)`
+export const SectionTitle = styled.h3`
+${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
+  font-weight: ${FONT_WEIGHT.MEDIUM};
+  color: ${colors.textInverted};
+  margin: 0 0 ${spacing.medium} 0;
+`
+
+export const SectionExcerpt = styled.p`
+${StyledText({ fontSize: FONT_SIZE.TEXT })};
   font-weight: ${FONT_WEIGHT.MEDIUM};
   color: ${colors.textInverted};
 `
@@ -99,7 +110,9 @@ export const Button = styled.button`
   border-radius: 5px;
   padding: ${spacing.xsmall} ${spacing.xlarge};
   background-color: ${colors.highlight};
-  color: #fff;
+  color: ${colors.textInverted};
+  font-weight: 600;
+  text-transform: uppercase;
   
   @media ${device.laptop} {
     padding: ${spacing.small} ${spacing.xlarge};

@@ -25,7 +25,7 @@ export const Container = styled.div`
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 3fr 8fr;
   }
 `
 
@@ -33,7 +33,7 @@ export const Sidebar = styled.div`
   padding: ${spacing.medium};
 
   @media ${device.laptop} {
-    padding: ${spacing.large} ${spacing.xxlarge} ${spacing.xlarge} 0;
+    padding: ${spacing.xxlarge};
   }
 `
 
@@ -58,7 +58,7 @@ export const ProfileImage = styled.div`
 
   @media ${device.laptop} {
     width: 100%;
-    margin: 0;
+    margin: 0 0 ${spacing.large} 0;
   }
 `
 
@@ -68,13 +68,14 @@ export const ProfileContent = styled.div`
 `
 
 export const ProfileName = styled.h1`
+${StyledText({ fontSize: FONT_SIZE.HEADING_5 })};
   margin: 0;
 `
 
 export const ProfileType = styled.div`
-  ${StyledText({ fontSize: FONT_SIZE.TEXT })};
+  ${StyledText({ fontSize: FONT_SIZE.SMALL })};
   text-transform: uppercase;
-  color: ${colors.textOp};
+  color: ${colors.textOp2};
 
   span {
     &:after {
@@ -92,6 +93,7 @@ export const ProfileInfo = styled.dl`
   grid-template-columns: max-content auto;
   grid-column-gap: 5px;
   padding: ${spacing.medium} 0;
+  ${StyledText({ fontSize: FONT_SIZE.TEXT })};
 
   dd {
     margin: 0;

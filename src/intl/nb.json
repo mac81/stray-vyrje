@@ -1,17 +1,26 @@
 {
-  "title": "Gatsby English",
-  "description": "Project description",
-  "author": "@louisbertin",
-  "hello": "Hi people!",
-  "welcome": "Welcome to your new Gatsby site.",
-  "title_page2": "Page two",
-  "hello_page2": "Hi from the second page",
-  "go_page2": "Go to page 2",
-  "welcome_page2": "Welcome to page 2",
-  "go_back": "Go back to the homepage",
-  "footer_build": "Built with",
-  "notfound": {
-      "header": "NOT FOUND",
-      "description": "You just hit a route that doesn't exist... the sadness."
+  "hero": "Vi bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder.",
+  "menu": {
+    "home": "Forside",
+    "peoples": "Menneskene",
+    "services": "Arbeidsfelt",
+    "contact": "Kontakt oss",
+    "about": "Om oss"
+  },
+  "footer": {
+    "title": "Stray Vyrje tilbyr bistand fra advokater som har bred erfaring med privat- og forretningsjus.",
+    "content": {
+      "p1": "Vi arbeider bl.a. mye med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring.",
+      "p2": "Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og tilgjengelige. Vi har spesialistkompetanse innenfor fagområdene sport- og immaterialrett.",
+      "p3": "Kontakt en av våre advokater i dag, så forteller vi mer om hva vi kan oppnå sammen."
+    }
+  },
+  "contactForm": {
+    "title": "Vi ringer deg opp!",
+    "subTitle": "Vi vil kontakte deg i løpet av dagen mellom 08:15 - 15:45 på hverdager.",
+    "name": "Navn",
+    "email": "Epost",
+    "telephone": "Telefon",
+    "submit": "Send"
   }
 }

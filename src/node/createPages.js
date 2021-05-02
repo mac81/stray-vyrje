@@ -2,7 +2,7 @@ const path = require("path")
 
 const createPages = async ({ graphql, actions: { createPage } }) => {
   const {
-    data: { lawyers, services },
+    data: { lawyers, services, servicesPage, peoples },
   } = await graphql(`
     {
       lawyers: allContentfulAdvokat {
@@ -28,6 +28,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
       }
       services: allContentfulArbeidsfelt {
         nodes {
+          slug
           node_locale
           name
           id
@@ -52,6 +53,21 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
           }
         }
       }
+      servicesPage: allContentfulSideArbeidsfelt {
+        nodes {
+          title
+          id
+          node_locale
+          
+        }
+      }
+      peoples: allContentfulSideAdvokater {
+        nodes {
+          title
+          id
+          node_locale 
+        }
+      }
     }
   `)
 
@@ -60,11 +76,11 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
 
     lawyers.nodes.forEach(({ id, slug }) =>
       createPage({
-        path: `/advokater/${slug}`,
+        path: `/menneskene/${slug}`,
         component: lawyerTemplate,
         context: {
-          id: id,
-          slug: slug
+          id,
+          slug
         },
       })
     )
@@ -73,12 +89,41 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
   if (services) {
     const serviceTemplate = path.resolve("./src/templates/service.js")
 
-    services.nodes.forEach(({ id }) =>
+    services.nodes.forEach(({ id, slug }) =>
       createPage({
-        path: `/arbeidsfelt/${id}`,
+        path: `/arbeidsfelt/${slug}`,
         component: serviceTemplate,
         context: {
-          id: id,
+          id,
+          slug
+        },
+      })
+    )
+  }
+
+  if (servicesPage) {
+    const servicePageTemplate = path.resolve("./src/templates/servicesPage.js")
+
+    servicesPage.nodes.forEach(({ id }) =>
+      createPage({
+        path: `/arbeidsfelt`,
+        component: servicePageTemplate,
+        context: {
+          id
+        },
+      })
+    )
+  }
+
+  if (peoples) {
+    const peoplesTemplate = path.resolve("./src/templates/peoples.js")
+
+    peoples.nodes.forEach(({ id }) =>
+      createPage({
+        path: `/menneskene`,
+        component: peoplesTemplate,
+        context: {
+          id
         },
       })
     )

@@ -2,9 +2,7 @@
 import React from 'react';
 import { Wrapper, Container, Sidebar, ServicesMenu, ServiceLink, Content, PrimaryTitle, SecondaryTitle, ServicesMenuTitle, Excerpt, Lawyers } from './Service.styled';
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import Img from "gatsby-image"
 import LawyerCard from '../lawyerCard/LawyerCard';
-import { Heading2 } from '../../utils/typography';
 
 export const Service = ({ details, services }) => {
   return (
@@ -14,7 +12,7 @@ export const Service = ({ details, services }) => {
           <ServicesMenuTitle>Arbeidsfelt</ServicesMenuTitle>
           <ServicesMenu>
             {services.map(service => (
-              <li>
+              <li key={service.id}>
                 <ServiceLink to={`/arbeidsfelt/${service.id}`} $active={details.id === service.id}>{service.name}</ServiceLink>
               </li>
             ))}
@@ -35,7 +33,7 @@ export const Service = ({ details, services }) => {
           <SecondaryTitle as="h2">Våre advokater innen {details.name}</SecondaryTitle>
           <Lawyers>
             {details.lawyers.map(lawyer => (
-              <LawyerCard lawyer={lawyer} />
+              <LawyerCard key={lawyer.id} lawyer={lawyer} />
             ))}
           </Lawyers>
 

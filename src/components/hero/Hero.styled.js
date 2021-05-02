@@ -2,11 +2,12 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { spacing } from "../../utils/spacing";
-import { FONT_SIZE, Heading3, StyledText, BODY_FONT_FAMILY } from "../../utils/typography"
+import { FONT_SIZE, StyledText } from "../../utils/typography"
+import { device } from "../../utils/mediaqueries"
 
 export const StyledHero = styled.div`
   position: relative;
-  height: 60vh;
+  height: 70vh;
   padding: ${spacing.medium};
   display: flex;
   align-items: center;
@@ -29,8 +30,13 @@ export const StyledHero = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1280px;
+  
+
+  @media ${device.tablet} {
+    max-width: 1280px;
   margin: 0 auto;
+  padding: 0 ${spacing.xxlarge};
+  }
 `;
 
 export const Card = styled.div`
@@ -43,11 +49,27 @@ export const Title = styled.h1`
 ${StyledText({ fontSize: FONT_SIZE.HEADING_6 })};
  color: ${colors.textInverted};
  text-align: center;
+
+ @media ${device.tablet} {
+  font-size: ${FONT_SIZE.HEADING_4};
+  }
+
+ @media ${device.laptop} {
+  text-align: left;
+  font-size: ${FONT_SIZE.HEADING_4};
+  }
 `;
 
 export const Actions = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+
+  @media ${device.laptop} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: ${spacing.xxlarge};
+  }
 `;
 
 export const Action = styled(Link)`
@@ -59,6 +81,8 @@ export const Action = styled(Link)`
   font-weight: 500;
   letter-spacing: 1px;
   ${StyledText({ fontSize: FONT_SIZE.TEXT })};
-  /* margin-right: 30px; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 `;
 

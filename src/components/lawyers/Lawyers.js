@@ -1,15 +1,19 @@
 import React from 'react';
-import { Page, PageTitle, PageSubTitle, Cards, Card, CardName } from './Lawyers.styled';
+import { Cards, Card, CardContent, CardName, CardInfo } from './Lawyers.styled';
 import Img from "gatsby-image"
 
 const Lawyers = ({ data: { title, lawyersList } }) => {
+  console.log(lawyersList)
   return (
-
     <Cards>
-      {lawyersList.map(({ id, slug, profileImage, name }) => (
-        <Card key={id} to={`/advokater/${slug}`}>
+      {lawyersList.map(({ id, slug, profileImage, name, type }) => (
+        <Card key={id} to={`/menneskene/${slug}`}>
           {profileImage && <Img fluid={profileImage.fluid} />}
-          <CardName>{name}</CardName>
+          <CardContent>
+            <CardName>{name}</CardName>
+
+            {type && <CardInfo>{type.join(", ")}</CardInfo>}
+          </CardContent>
         </Card>
       ))}
     </Cards>
