@@ -6,6 +6,8 @@ import { spacing } from "../../utils/spacing";
 
 export const Card = styled(Link)`
   position: relative;
+
+ 
 `
 
 export const CardContent = styled.div`

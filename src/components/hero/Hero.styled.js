@@ -73,7 +73,7 @@ export const Actions = styled.div`
 `;
 
 export const Action = styled(Link)`
-  color: ${colors.textInverted};
+  /* color: ${colors.textInverted};
   text-decoration: none;
   padding: 6px 12px;
   text-transform: uppercase;
@@ -83,6 +83,52 @@ export const Action = styled(Link)`
   ${StyledText({ fontSize: FONT_SIZE.TEXT })};
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+
+color: ${colors.textInverted};
+  text-decoration: none;
+  padding: 6px 12px;
+  border-bottom: 2px solid ${colors.highlight};
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  justify-content: center;
+  margin: 5px 5px 20px 5px;
+
+
+    
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    position: relative;
+    
+    transition-property: color;
+    
+    transition-duration: 0.3s;
+
+    &:before {
+      content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:${colors.highlight};
+    
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    }
+
+    &:hover:before {
+      transform: scaleY(1);
+    }
+
+    @media ${device.laptop} {
+    margin: 0;
+  }
 `;
 

@@ -15,13 +15,15 @@ const Services = ({ data }) => {
               <Img fluid={service.icon.fluid} className="card-icon" />
             </CardIcon>
           )} */}
-          <CardTitle>{service.name}</CardTitle>
+          <div>
+            <CardTitle>{service.name}</CardTitle>
 
-          <CardSummary
-            dangerouslySetInnerHTML={{
-              __html: service.excerpt.childMarkdownRemark.html,
-            }}
-          />
+            <CardSummary
+              dangerouslySetInnerHTML={{
+                __html: service.excerpt.childMarkdownRemark.html,
+              }}
+            />
+          </div>
           {/* <CardLink>{`Les mer om ${service.name}`}</CardLink> */}
         </Card>
       ))}
