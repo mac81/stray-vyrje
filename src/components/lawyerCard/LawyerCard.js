@@ -7,7 +7,7 @@ const LawyerCard = ({ lawyer: { id, slug, name, profileImage, type } }) => {
   return (
     <Card key={id} to={`/menneskene/${slug}`}>
       {profileImage && <Img fluid={profileImage.fluid} />}
-      <CardContent>
+      <CardContent className="card-content">
         <CardName>{name}</CardName>
 
         {type && <CardInfo>{type.join(", ")}</CardInfo>}

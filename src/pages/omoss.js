@@ -9,7 +9,6 @@ import { device } from "../utils/mediaqueries"
 import { spacing } from "../utils/spacing";
 import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page";
-import ContactForm from "../components/contactForm/ContactForm";
 
 const Section = styled.section`
   background: ${props => props.version === "dark" ? colors.primary : "#fff"};
@@ -81,31 +80,27 @@ const Menneskene = () => {
         </PageHeader>
         <PageContent>
 
-          <SplitContainer>
-            <div>
-              <p>
-                Stray Vyrje bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av
-                områder. Våre advokater har i tillegg svært lang erfaring og spisskompetanse på forretningsjus
-                og privatrett, sport, og immaterielle rettigheter.
+
+
+          <p>
+            Stray Vyrje bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av
+            områder. Våre advokater har i tillegg svært lang erfaring og spisskompetanse på forretningsjus
+            og privatrett, sport, og immaterielle rettigheter.
         </p>
-              <p>
-                Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring.
-                Flere av våre advokater er forfattere på Gyldendal Rettsdata, fagbokforfattere og forelesere.
+          <p>
+            Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring.
+            Flere av våre advokater er forfattere på Gyldendal Rettsdata, fagbokforfattere og forelesere.
         </p>
-              <p>
-                Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og
-                tilgjengelige. Vi har spesialistkompetanse innenfor sport og immaterielle rettigheter. Kontakt oss
-                i dag, så forteller vi mer om hva vi kan oppnå sammen.
+          <p>
+            Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og
+            tilgjengelige. Vi har spesialistkompetanse innenfor sport og immaterielle rettigheter. Kontakt oss
+            i dag, så forteller vi mer om hva vi kan oppnå sammen.
         </p>
-              <SubTitle>Timepris</SubTitle>
-              <p>Timepris utgjør NOK 2.000 – 4.000 ekskl. mva. beroende på oppdragets kompleksitet og omfang.</p>
-            </div>
-            <div>
-              <SubTitle>Trenger du hjelp?</SubTitle>
-              <p>Legg igjen en beskjed så vil vi kontakte deg mellom 08:15 - 15:45 på hverdager.</p>
-              <ContactForm />
-            </div>
-          </SplitContainer>
+          <SubTitle>Timepris</SubTitle>
+          <p>Timepris utgjør NOK 2.000 – 4.000 ekskl. mva. beroende på oppdragets kompleksitet og omfang.</p>
+
+
+
         </PageContent>
 
         <Section version="dark">
@@ -113,10 +108,9 @@ const Menneskene = () => {
             <SectionTitle version="dark">Verdier</SectionTitle>
             <Test>
               <p>I møte med Stray Vyrje vil du raskt oppdage at våre kjerneverdier: Kvalitet, integritet og
-              tilgjengelighet tilsammen kjennetegner hvordan vi møter mennesker og utfører vårt arbeid. Vi
-              etterstreber alltid å levere høy kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som vil kunne gå
-              på bekostning av vår yrkesmessige eller personlige integritet og vi strekker oss langt for å alltid
-kunne være til stede for både kollegaer og klienter.</p>
+              tilgjengelighet kjennetegner hvordan vi møter mennesker og utfører vårt arbeid. Vi
+              etterstreber å levere kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som kan gå
+              på bekostning av vår yrkesmessige eller personlige integritet. Vi strekker oss langt for å være til stede for både kollegaer og klienter.</p>
             </Test>
           </PageContent>
         </Section>
@@ -127,7 +121,7 @@ kunne være til stede for både kollegaer og klienter.</p>
             <SplitContainer>
               <div>
                 <p>
-                  Stray Vyrje er en Miljøfyrtårn bedrift. Dette betyr at vi kontinuerlig jobber med miljøtiltak i
+                  Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi kontinuerlig jobber med miljøtiltak i
                   hverdagen og gjennom stiftelsens krav til bedriften ivaretas også et godt arbeidsmiljø.
                   Gjennom kontroll av bransjetilpassede krav tildeles sertifikatet som et bevis på firmaets arbeid
                   for et bedre miljø. Hvert tredje år må bedriften resertifiseres. Sertifikatet er godkjent av

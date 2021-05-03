@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { colors } from "../../utils/colors";
 import { spacing } from "../../utils/spacing";
-import { FONT_SIZE, FONT_WEIGHT, Text, StyledText } from "../../utils/typography";
+import { FONT_SIZE, FONT_WEIGHT, StyledText } from "../../utils/typography";
 import { device } from "../../utils/mediaqueries"
 
 export const StyledFooter = styled.footer`

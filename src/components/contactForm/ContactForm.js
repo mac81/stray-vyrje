@@ -3,6 +3,7 @@ import { Form, Input, Textarea, Button } from "./ContactForm.styled";
 
 const ContactForm = () => (
   <Form>
+    <input type="hidden" name="form-name" value="contact" />
     <Input type="text" placeholder="Navn" />
     <Input type="text" placeholder="Epost *" required />
     <Input type="text" placeholder="Telefon" />

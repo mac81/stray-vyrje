@@ -9,7 +9,7 @@ const Service = ({ data }) => {
   const servicesData = data.contentfulSideArbeidsfelt.services;
   return (
     <Layout>
-      <Seo title="Arbeidsfelt" />
+      <Seo title={`Arbeidsfelt ${serviceData.name}`} />
       <ServiceDetail details={serviceData} services={servicesData} />
     </Layout>
   )
@@ -43,6 +43,7 @@ query ServiceBySlug($slug: String!, $locale: String) {
   contentfulSideArbeidsfelt(node_locale: {eq: $locale}) {
     services {
       name
+      slug
       id
     }
   }

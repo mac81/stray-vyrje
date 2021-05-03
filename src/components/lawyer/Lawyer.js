@@ -15,7 +15,7 @@ export const Lawyer = ({ data, locale }) => {
             {data.profileImage && <ProfileImage><Img fluid={data.profileImage.fluid} /></ProfileImage>}
             <ProfileContent>
               <ProfileName as="h1">{data.name}</ProfileName>
-              {data.type && (<ProfileType>{data.type.map(type => <span>{type}</span>)}</ProfileType>)}
+              {data.type && (<ProfileType>{data.type.map(type => <span key={type}>{type}</span>)}</ProfileType>)}
               <ProfileInfo>
                 <dt>{locale === "en" ? en.telephone : "Telefon"}:</dt>
                 <dd><a href={`tel:${data.phoneNumber}`}>{data.phoneNumber}</a></dd>

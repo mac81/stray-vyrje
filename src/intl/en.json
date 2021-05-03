@@ -1,5 +1,5 @@
 {
-  "hero": "We assist companies, organisations and business clients within a wide range of markets.",
+  "hero": "We assist companies, organisations and business clients within a wide range of markets",
   "menu": {
     "home": "Home",
     "peoples": "Partners",
@@ -8,7 +8,7 @@
     "about": "About"
   },
   "footer": {
-    "title": "Stray Vyrje assists companies, organisations and business clients within a wide range of markets. Our attorneys have extensive experience in Business and Private Law, Sports and Intellectual Property Rights.",
+    "title": "Stray Vyrje assists companies, organisations and business clients within a wide range of markets. Our attorneys have extensive experience in Business and Private Law, Sports and Intellectual Property Rights",
     "content": {
       "p1": "Areas of actuation comprises of Labour, Contract and Corporate Law. In addition our lawyers have significant experience with negotiation and litigation.",
       "p2": "As a client with Stray Vyrje you will meet solution-oriented lawyers that are dedicated and available.",
@@ -17,11 +17,10 @@
   },
   "contactForm": {
     "title": "We will call you back!",
-    "subTitle": "We will contact you between 08:15 and 15:45 on weekdays.",
+    "subTitle": "We will contact you between 08:15 and 15:45 on weekdays",
     "telephone": "Telephone",
     "email": "E-mail",
     "name": "Name",
     "submit": "Send"
   }
-  
 }

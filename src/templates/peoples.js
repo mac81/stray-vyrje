@@ -6,10 +6,9 @@ import { graphql } from "gatsby"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page";
 
 const Peoples = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
-      <Seo title={data.contentfulSideAdvokater.title} />
+      <Seo title={"Menneskene"} />
       <Page>
         <PageHeader>
           <PageTitle>{data.contentfulSideAdvokater.title}</PageTitle>

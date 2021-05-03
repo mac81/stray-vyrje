@@ -9,7 +9,7 @@ const Lawyer = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo title="Advokat" />
+      <Seo title={lawyerData.name} />
       <LawyerDetail data={lawyerData} locale={pageContext.locale} />
     </Layout>
   )

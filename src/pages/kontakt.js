@@ -47,7 +47,7 @@ dd {
 const Section = styled.div`
   margin-bottom: ${spacing.xlarge};
   p {
-    margin: ${spacing.medium} 0;
+    margin: ${spacing.xxsmall} 0;
   }
 `;
 
@@ -62,7 +62,7 @@ const SectionTitle = styled.h2`
 const ContactPage = () => {
   return (
     <Layout>
-      <Seo title="Kontakt oss - Stray Vyrje" />
+      <Seo title="Kontakt oss" />
       <Page>
         <PageHeader>
           <PageTitle>Kontakt oss</PageTitle>
@@ -89,10 +89,23 @@ const ContactPage = () => {
                 <dd><a href="mailto:post@svco.no">post@svco.no</a></dd>
               </dl>
 
+              <SectionTitle>Her finner du oss</SectionTitle>
+              <iframe
+                title="Google maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.6402302805068!2d10.68699931668713!3d59.92151798186988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416dca0acb451d%3A0xd2a0f689d0c560c!2sStray%20Vyrje%20%26%20Co%20DA%20Advokatfirma!5e0!3m2!1sno!2sno!4v1620054636726!5m2!1sno!2sno"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy" />
+
               <SectionTitle>Åpningstid</SectionTitle>
               <p>Resepsjon og sentralbord betjenes ukedager kl. 09.00 - 12.15 og 12.45 - 17.00</p>
               <p>Henvendelser etter kontortid rettes direkte til advokatene</p>
             </Section>
+
+
+
           </Sections>
         </PageContent>
       </Page>

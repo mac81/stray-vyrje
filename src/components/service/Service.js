@@ -13,7 +13,7 @@ export const Service = ({ details, services }) => {
           <ServicesMenu>
             {services.map(service => (
               <li key={service.id}>
-                <ServiceLink to={`/arbeidsfelt/${service.id}`} $active={details.id === service.id}>{service.name}</ServiceLink>
+                <ServiceLink to={`/arbeidsfelt/${service.slug}`} $active={details.id === service.id}>{service.name}</ServiceLink>
               </li>
             ))}
           </ServicesMenu>

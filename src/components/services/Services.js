@@ -1,7 +1,5 @@
 import React from 'react';
-import { Container, Card, CardIcon, CardTitle, CardSummary } from './Services.styled';
-import Img from "gatsby-image"
-
+import { Container, Card, CardTitle, CardSummary } from './Services.styled';
 
 const Services = ({ data }) => {
 

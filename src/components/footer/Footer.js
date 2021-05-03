@@ -24,7 +24,7 @@ const Footer = ({ intl }) => {
           <p><FormattedMessage id="contactForm.subTitle" /></p>
           <SectionContent>
             <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="callback" />
               <Input type="text" placeholder={intl.formatMessage({ id: "contactForm.name" })} name="name" required />
               <Input type="text" placeholder={intl.formatMessage({ id: "contactForm.email" })} name="email" />
               <Input type="text" placeholder={intl.formatMessage({ id: "contactForm.telephone" })} name="telephone" required />

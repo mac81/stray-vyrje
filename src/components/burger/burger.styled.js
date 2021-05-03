@@ -39,5 +39,6 @@ export const StyledBurger = styled.button`
   
   @media ${device.desktop} {
     right: ${spacing.xxlarge};
+    top: -2px;
   }
 `;

@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl";
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
+import { StyledText, FONT_SIZE } from "../../utils/typography";
+import Test from "../../icons/arrow-down.svg";
 
 
 const languageName = {
@@ -14,6 +16,8 @@ const LanguageWrapper = styled.div`
   position: relative;
   margin-right: 30px;
   min-width: 120px;
+
+  ${StyledText({ fontSize: FONT_SIZE.SMALL })};
 `;
 
 const ToggleLanguage = styled.button`
@@ -24,10 +28,14 @@ const ToggleLanguage = styled.button`
   padding: 5px 10px;
   color: #fff;
   cursor: pointer;
+
+  
+
   svg {
-    width: 30px;
+    width: 20px;
     margin-right: 5px;
   }
+
 `;
 
 const Languages = styled.ul`
@@ -40,6 +48,8 @@ const Languages = styled.ul`
   background-color: ${colors.primary};
   margin: 0;
   padding: 0;
+
+  
 
   li {
     margin: 0;
@@ -54,16 +64,15 @@ const LanguageLink = styled.a`
   padding: 5px 10px;
   cursor: pointer;
   svg {
-    width: 30px;
+    width: 20px;
     margin-right: 5px;
   }
 `;
 
+const ArrowIcon = styled(Test)`
+margin-right: 0!important;
+`;
 
-
-// const ArrowIcon = () => (
-//   <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillrule="evenodd" clipRule="evenodd"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z" /></svg>
-// )
 
 const NorwegianFlag = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16"><path fill="#ba0c2f" d="M0 0h22v16H0z" /><g fill="#fff"><path d="M6 0h4v16H6z" /><path d="M0 6h22v4H0z" /></g><g fill="#00205b"><path d="M7 0h2v16H7z" /><path d="M0 7h22v2H0z" /></g></svg>
@@ -87,7 +96,7 @@ const Language = () => {
             <ToggleLanguage onClick={() => setDisplayLanguages(!displayLanguages)}>
               {currentLocale === "nb" ? <Flag /> : <EnglishFlag />}
               {languageName[currentLocale]}
-              {/* <ArrowIcon /> */}
+              <ArrowIcon />
             </ToggleLanguage>
             {displayLanguages && (
               <Languages>

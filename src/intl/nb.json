@@ -1,5 +1,5 @@
 {
-  "hero": "Vi bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder.",
+  "hero": "Vi bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder",
   "menu": {
     "home": "Forside",
     "peoples": "Menneskene",
@@ -8,7 +8,7 @@
     "about": "Om oss"
   },
   "footer": {
-    "title": "Stray Vyrje tilbyr bistand fra advokater som har bred erfaring med privat- og forretningsjus.",
+    "title": "Stray Vyrje tilbyr bistand fra advokater som har bred erfaring med privat- og forretningsjus",
     "content": {
       "p1": "Vi arbeider bl.a. mye med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring.",
       "p2": "Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og tilgjengelige. Vi har spesialistkompetanse innenfor fagområdene sport- og immaterialrett.",
@@ -17,7 +17,7 @@
   },
   "contactForm": {
     "title": "Vi ringer deg opp!",
-    "subTitle": "Vi vil kontakte deg i løpet av dagen mellom 08:15 - 15:45 på hverdager.",
+    "subTitle": "Vi vil kontakte deg i løpet av dagen mellom 08:15 - 15:45 på hverdager",
     "name": "Navn",
     "email": "Epost",
     "telephone": "Telefon",

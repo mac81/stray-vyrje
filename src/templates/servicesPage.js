@@ -8,7 +8,7 @@ import Page, { PageTitle, PageSubTitle, PageHeader, PageContent } from "../compo
 const ServicesPage = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Advokatene" />
+      <Seo title="Arbeidsfelt" />
       <Page>
         <PageHeader>
           <PageTitle>{data?.contentfulSideArbeidsfelt?.title}</PageTitle>
