@@ -28,12 +28,14 @@ const StyledLayout = styled.div`
   `;
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, displayHeader = true }) => {
   return (
     <StyledLayout>
       <GlobalStyle theme="purple" />
 
-      <Header />
+      {displayHeader && (
+        <Header />
+      )}
 
       <main>
         {children}

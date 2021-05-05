@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout displayHeader={false}>
       <Seo title="Stray Vyrje" />
       <Hero />
     </Layout>

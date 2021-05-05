@@ -4,14 +4,14 @@ import { spacing } from "../../utils/spacing";
 import { device } from "../../utils/mediaqueries"
 
 export const StyledHeader = styled.header`
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 5;
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: ${colors.primary};
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: ${props => props.$displayBackground && colors.primary};
+  box-shadow: ${props => props.$displayBackground && "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"};
   
   @media ${device.laptop} {
     height: 80px;

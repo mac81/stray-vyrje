@@ -4,13 +4,12 @@ import { colors } from "../../utils/colors";
 import { spacing } from "../../utils/spacing";
 import { FONT_SIZE, StyledText } from "../../utils/typography"
 import { device } from "../../utils/mediaqueries"
+import { linearGradient, rgba } from "polished";
 
 export const StyledHero = styled.div`
   position: relative;
   height: 70vh;
-  padding: ${spacing.medium};
-  display: flex;
-  align-items: center;
+
   background: ${colors.primary};
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSJhHT10TPxXs4_5AXIgPSEJXLxi7spx2k0Q&usqp=CAU");
   background-size: cover;
@@ -19,18 +18,26 @@ export const StyledHero = styled.div`
   &:after {
     content: "";
     position: absolute;
+    z-index: 1;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: rgba(33, 37, 50, 0.97);
-    z-index: 1;
+    background: ${linearGradient({
+  colorStops: [`${rgba(colors.secondary, 0.5)} 0%`, `${rgba(colors.secondary, 0.5)} 60%`, `${rgba(colors.primary, 0.5)} 100%`],
+  toDirection: 'to bottom right',
+  fallback: colors.secondary
+})}; 
   }
 `;
 
 export const Container = styled.div`
   width: 100%;
-  
+  height: 100%;
+  padding: ${spacing.medium};
+  display: flex;
+  align-items: center;
 
   @media ${device.tablet} {
     max-width: 1280px;

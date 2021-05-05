@@ -94,7 +94,7 @@ const Menneskene = () => {
             i dag, så forteller vi mer om hva vi kan oppnå sammen.
         </p>
           <SubTitle>Timepris</SubTitle>
-          <p>Vår timepris utgjør i utgangspunkter kr 2.800 + mva. Privatklienter belastes kr 2.240 + mva.</p>
+          <p>Vår timepris utgjør i utgangspunktet kr 2.800 + mva. Privatklienter belastes kr 2.240 + mva.</p>
         </PageContent>
 
         <Section version="dark">

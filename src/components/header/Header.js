@@ -9,7 +9,7 @@ import useOnClickOutside from "../../utils/hooks/useOnClickOutside"
 import { StyledHeader, Container, Logo, MenuContainer } from "./Header.styled";
 import Language from "../language/Language";
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, displayBackground = true }) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
 
@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <>
-      <StyledHeader>
+      <StyledHeader $displayBackground={displayBackground}>
         <Container>
           <Link to="/">
             <Logo src={logo} />

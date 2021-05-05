@@ -1,10 +1,14 @@
 import React from 'react';
 import { StyledHero, Container, Card, Title, Actions, Action } from './Hero.styled';
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl";
+// import { Parallax, Background } from 'react-parallax';
+import Header from '../header/Header';
 
 const Hero = ({ intl }) => {
   return (
     <StyledHero>
+      <Header displayBackground={false} />
+
       <Container>
         <Card>
           <Title as="h1"><FormattedMessage id="hero" /></Title>
@@ -15,6 +19,10 @@ const Hero = ({ intl }) => {
           </Actions>
         </Card>
       </Container>
+
+
+
+
     </StyledHero>
   )
 }
