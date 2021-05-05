@@ -68,9 +68,9 @@ overflow: hidden;
   z-index:2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: ${spacing.medium};
+  padding: ${spacing.large};
   height: 100%;
   width: 100%;
 }

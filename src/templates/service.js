@@ -5,11 +5,11 @@ import { graphql } from "gatsby"
 import { Service as ServiceDetail } from "../components/service/Service";
 
 const Service = ({ data }) => {
-  const serviceData = data.contentfulArbeidsfelt;
-  const servicesData = data.contentfulSideArbeidsfelt.services;
+  const serviceData = data?.contentfulArbeidsfelt;
+  const servicesData = data?.contentfulSideArbeidsfelt?.services;
   return (
     <Layout>
-      <Seo title={`Arbeidsfelt ${serviceData.name}`} />
+      <Seo title={`Arbeidsfelt ${serviceData?.name}`} />
       <ServiceDetail details={serviceData} services={servicesData} />
     </Layout>
   )

@@ -71,8 +71,7 @@ const ContactPage = () => {
           <Sections>
 
             <Section>
-              <SectionTitle>Legg igjen en beskjed</SectionTitle>
-              <p>Legg igjen en beskjed så kontakter vi deg så fort vi har mulighet</p>
+              <SectionTitle>Legg igjen en beskjed så kontakter vi deg så snart vi har mulighet</SectionTitle>
               <ContactForm />
             </Section>
             <Section>
@@ -82,12 +81,21 @@ const ContactPage = () => {
                 <p>Drammensveien 123 (3. etasje)</p>
                 <p>Postboks 520 Skøyen, 0214 Oslo</p>
               </div>
+
               <dl>
                 <dt>Telefon</dt>
                 <dd><a href="tel:+4723085010">(+47) 23 08 50 10</a></dd>
                 <dt>Epost</dt>
                 <dd><a href="mailto:post@svco.no">post@svco.no</a></dd>
               </dl>
+
+              <SectionTitle>Firmainformasjon</SectionTitle>
+              <dl>
+                <dt>Org nummer</dt>
+                <dd>976570693</dd>
+
+              </dl>
+
 
               <SectionTitle>Her finner du oss</SectionTitle>
               <iframe
@@ -100,7 +108,7 @@ const ContactPage = () => {
                 loading="lazy" />
 
               <SectionTitle>Åpningstid</SectionTitle>
-              <p>Resepsjon og sentralbord betjenes ukedager kl. 09.00 - 12.15 og 12.45 - 17.00</p>
+              <p>Resepsjon og sentralbord betjenes ukedager kl. 09.00 - 12.30 og 13.00 - 17.00</p>
               <p>Henvendelser etter kontortid rettes direkte til advokatene</p>
             </Section>
 

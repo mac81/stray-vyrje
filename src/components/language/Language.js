@@ -15,7 +15,7 @@ const languageName = {
 const LanguageWrapper = styled.div`
   position: relative;
   margin-right: 30px;
-  min-width: 120px;
+  min-width: 80px;
 
   ${StyledText({ fontSize: FONT_SIZE.SMALL })};
 `;
@@ -95,7 +95,7 @@ const Language = () => {
           <>
             <ToggleLanguage onClick={() => setDisplayLanguages(!displayLanguages)}>
               {currentLocale === "nb" ? <Flag /> : <EnglishFlag />}
-              {languageName[currentLocale]}
+              {/* {languageName[currentLocale]} */}
               <ArrowIcon />
             </ToggleLanguage>
             {displayLanguages && (
@@ -109,7 +109,7 @@ const Language = () => {
                     >
 
                       {language === "nb" ? <NorwegianFlag /> : <EnglishFlag />}
-                      {languageName[language]}
+                      {/* {languageName[language]} */}
                     </LanguageLink>
                   </li>
                 ))}

@@ -4,7 +4,7 @@ import { spacing } from '../../utils/spacing';
 
 export const StyledBurger = styled.button`
   position: absolute;
-  top: 4px;
+  top: -2px;
   right: ${spacing.medium};
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ export const StyledBurger = styled.button`
     }
   }
   
-  @media ${device.desktop} {
+  @media ${device.laptop} {
     right: ${spacing.xxlarge};
     top: -2px;
   }

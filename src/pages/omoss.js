@@ -79,12 +79,9 @@ const Menneskene = () => {
           <PageTitle>Om oss</PageTitle>
         </PageHeader>
         <PageContent>
-
-
-
           <p>
             Stray Vyrje bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av
-            områder. Våre advokater har i tillegg svært lang erfaring og spisskompetanse på forretningsjus
+            områder. Våre advokater har i tillegg lang erfaring og spisskompetanse på forretningsjus
             og privatrett, sport, og immaterielle rettigheter.
         </p>
           <p>
@@ -97,20 +94,17 @@ const Menneskene = () => {
             i dag, så forteller vi mer om hva vi kan oppnå sammen.
         </p>
           <SubTitle>Timepris</SubTitle>
-          <p>Timepris utgjør NOK 2.000 – 4.000 ekskl. mva. beroende på oppdragets kompleksitet og omfang.</p>
-
-
-
+          <p>Vår timepris utgjør i utgangspunkter kr 2.800 + mva. Privatklienter belastes kr 2.240 + mva.</p>
         </PageContent>
 
         <Section version="dark">
           <PageContent>
             <SectionTitle version="dark">Verdier</SectionTitle>
             <Test>
-              <p>I møte med Stray Vyrje vil du raskt oppdage at våre kjerneverdier: Kvalitet, integritet og
-              tilgjengelighet kjennetegner hvordan vi møter mennesker og utfører vårt arbeid. Vi
+              <p>I møte med Stray Vyrje vil du oppdage at våre kjerneverdier, kvalitet, integritet og
+              tilgjengelighet kjennetegner hvordan vi møter verden og utfører vårt arbeid. Vi
               etterstreber å levere kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som kan gå
-              på bekostning av vår yrkesmessige eller personlige integritet. Vi strekker oss langt for å være til stede for både kollegaer og klienter.</p>
+              på bekostning av vår yrkesmessige integritet. Vi strekker oss langt for å være til stede for kollegaer og klienter.</p>
             </Test>
           </PageContent>
         </Section>
@@ -126,12 +120,12 @@ const Menneskene = () => {
                   Gjennom kontroll av bransjetilpassede krav tildeles sertifikatet som et bevis på firmaets arbeid
                   for et bedre miljø. Hvert tredje år må bedriften resertifiseres. Sertifikatet er godkjent av
                   myndighetene og støttes og anbefales av Miljøverndepartementet.
-        </p>
+                </p>
                 <p>Les mer om Miljøfyrtårn her: <a href="http://www.miljofytarn.no">www.miljofytarn.no</a></p>
               </div>
 
               <div>
-                <p>På utsiden av eget kontor er Stray Vyrje involvert Karanba i Brasil. Karanba er et sosialt prosjekt
+                <p>Stray Vyrje støtter Karanba. Karanba er et sosialt prosjekt
                 i Rio de Janeiro. Med fotball som virkemiddel hjelper Karanba et stort antall barn og unge fra
 slumområdene med personlig utvikling, utdanning og utfoldelse.</p>
                 <p>Les mer om Karanba her: <a href="http://www.karanba.com">www.karanba.com</a></p>

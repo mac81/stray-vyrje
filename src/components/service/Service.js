@@ -11,7 +11,7 @@ export const Service = ({ details, services }) => {
         <Sidebar>
           <ServicesMenuTitle>Arbeidsfelt</ServicesMenuTitle>
           <ServicesMenu>
-            {services.map(service => (
+            {services?.map(service => (
               <li key={service.id}>
                 <ServiceLink to={`/arbeidsfelt/${service.slug}`} $active={details.id === service.id}>{service.name}</ServiceLink>
               </li>
@@ -21,18 +21,18 @@ export const Service = ({ details, services }) => {
 
         </Sidebar>
         <Content>
-          <PrimaryTitle as="h1">{details.name}</PrimaryTitle>
-          <Excerpt
+          <PrimaryTitle as="h1">{details?.name}</PrimaryTitle>
+          {/* <Excerpt
             dangerouslySetInnerHTML={{
-              __html: details.excerpt.childMarkdownRemark.html,
+              __html: details?.excerpt.childMarkdownRemark.html,
             }}
-          />
+          /> */}
 
-          {details.body && renderRichText(details.body)}
+          {details?.body && renderRichText(details.body)}
 
-          <SecondaryTitle as="h2">Våre advokater innen {details.name}</SecondaryTitle>
+          <SecondaryTitle as="h2">Våre advokater innen {details?.name}</SecondaryTitle>
           <Lawyers>
-            {details.lawyers.map(lawyer => (
+            {details?.lawyers.map(lawyer => (
               <LawyerCard key={lawyer.id} lawyer={lawyer} />
             ))}
           </Lawyers>

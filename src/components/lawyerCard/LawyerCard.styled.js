@@ -6,9 +6,6 @@ import { spacing } from "../../utils/spacing";
 
 export const Card = styled(Link)`
   position: relative;
-  
-
- 
   &:hover {
     .card-content {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
