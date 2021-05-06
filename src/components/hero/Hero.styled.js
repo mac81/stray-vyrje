@@ -27,9 +27,9 @@ export const StyledHero = styled.div`
     background: rgba(33, 37, 50, 0.95);
     background: ${linearGradient({
       colorStops: [
-        `${rgba(colors.secondary, 0.5)} 0%`,
+        `${rgba(colors.primary, 0.5)} 0%`,
         `${rgba(colors.secondary, 0.5)} 60%`,
-        `${rgba(colors.primary, 0.5)} 100%`,
+        `${rgba(colors.secondary, 0.9)} 100%`,
       ],
       toDirection: "to bottom right",
       fallback: colors.secondary,
