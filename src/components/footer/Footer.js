@@ -77,16 +77,18 @@ const Footer = ({ intl }) => {
       </Container>
       <Info>
         <div>
-          <span>Stray Vyrje & Co DA Advokatfirma</span>|
-          <span>Drammensveien 123 Postboks 520 Skøyen, 0214 Oslo </span>|
-          <span>(+47) 23 08 50 10</span>|<span>post@svco.no</span>|
+          <span>Stray Vyrje & Co DA Advokatfirma</span>
+          <span>Drammensveien 123 Postboks 520 Skøyen, 0214 Oslo </span>
+          <span>(+47) 23 08 50 10</span>
+          <span>post@svco.no</span>
+
           <a
             href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"
             target="_blank"
           >
             <LinkedIn />
           </a>
-          |
+
           <a
             href="https://www.facebook.com/Stray-Vyrje-Co-DA-Advokatfirma-124511097625943/"
             target="_blank"

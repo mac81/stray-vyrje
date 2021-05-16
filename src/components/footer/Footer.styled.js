@@ -128,6 +128,8 @@ export const Info = styled.div`
 
   > div {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 
     span {
@@ -137,7 +139,17 @@ export const Info = styled.div`
     a {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin: 0 10px;
+    }
+
+    @media ${device.laptop} {
+      flex-direction: row;
+
+      span:after {
+        content: "|";
+        padding-left: 10px;
+      }
     }
   }
 
