@@ -15,6 +15,8 @@ import logo from "../../images/logo.png"
 import { Link } from "gatsby"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import logo2 from "../../images/logoiurisgalblanco.png"
+import LinkedIn from "../../icons/linkedIn.svg"
+import Facebook from "../../icons/facebook.svg"
 
 const Footer = ({ intl }) => {
   return (
@@ -74,9 +76,27 @@ const Footer = ({ intl }) => {
         </Section>
       </Container>
       <Info>
-        Stray Vyrje & Co DA Advokatfirma | Drammensveien 123 Postboks 520
-        Skøyen, 0214 Oslo | (+47) 23 08 50 10 | post@svco.no
-        <img src={logo2} />
+        <div>
+          <span>Stray Vyrje & Co DA Advokatfirma</span>|
+          <span>Drammensveien 123 Postboks 520 Skøyen, 0214 Oslo </span>|
+          <span>(+47) 23 08 50 10</span>|<span>post@svco.no</span>|
+          <a
+            href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"
+            target="_blank"
+          >
+            <LinkedIn />
+          </a>
+          |
+          <a
+            href="https://www.facebook.com/Stray-Vyrje-Co-DA-Advokatfirma-124511097625943/"
+            target="_blank"
+          >
+            <Facebook />
+          </a>
+        </div>
+        <a href="http://www.iurisgal.com" target="_blank">
+          <img src={logo2} />
+        </a>
       </Info>
     </StyledFooter>
   )

@@ -126,6 +126,21 @@ export const Info = styled.div`
   color: ${colors.textInverted};
   ${StyledText({ fontSize: FONT_SIZE.SMALL })};
 
+  > div {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding: 0 10px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+  }
+
   img {
     margin: 20px 0;
     max-width: 200px;

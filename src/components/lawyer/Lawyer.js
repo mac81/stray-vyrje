@@ -13,9 +13,10 @@ import {
 } from "./Lawyer.styled"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from "gatsby-image"
-import en from "../../intl/en.json"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 export const Lawyer = ({ data, locale }) => {
+  const intl = useIntl()
   return (
     <Wrapper>
       <Container>
@@ -35,19 +36,24 @@ export const Lawyer = ({ data, locale }) => {
                   ))}
                 </ProfileType>
               )}
-              {data.phoneNumber ||
-                (data.email && (
-                  <ProfileInfo>
-                    <dt>{locale === "en" ? en.telephone : "Telefon"}:</dt>
-                    <dd>
-                      <a href={`tel:${data.phoneNumber}`}>{data.phoneNumber}</a>
-                    </dd>
-                    <dt>{locale === "en" ? en.email : "E-post"}:</dt>
-                    <dd>
-                      <a href={`mailto:${data.email}`}>{data.email}</a>
-                    </dd>
-                  </ProfileInfo>
-                ))}
+              {(data.phoneNumber || data.email) && (
+                <ProfileInfo>
+                  <dt>
+                    {" "}
+                    <FormattedMessage id="contactForm.telephone" />:
+                  </dt>
+                  <dd>
+                    <a href={`tel:${data.phoneNumber}`}>{data.phoneNumber}</a>
+                  </dd>
+                  <dt>
+                    {" "}
+                    <FormattedMessage id="contactForm.email" />:
+                  </dt>
+                  <dd>
+                    <a href={`mailto:${data.email}`}>{data.email}</a>
+                  </dd>
+                </ProfileInfo>
+              )}
             </ProfileContent>
           </Profile>
         </Sidebar>

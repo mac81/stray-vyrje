@@ -11,6 +11,7 @@ import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
 import hvitvasking from "../images/hvitvaskingsrutiner2020.pdf"
 import personvern from "../images/personvern2021.pdf"
 import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const Section = styled.section`
   background: ${props => (props.version === "dark" ? colors.primary : "#fff")};
@@ -70,116 +71,123 @@ const Test = styled.div`
 `
 
 const Menneskene = () => {
+  const intl = useIntl()
   return (
     <Layout>
       <Seo title="Om oss" />
       <Page>
         <PageHeader>
-          <PageTitle>Om oss</PageTitle>
+          <PageTitle>
+            <FormattedMessage id="aboutUsPage.title" />
+          </PageTitle>
         </PageHeader>
         <PageContent>
           <SplitContainer>
             <div>
               <p>
-                Stray Vyrje bistår næringsdrivende, organisasjoner og private
-                innenfor et bredt spekter av områder. Våre advokater har i
-                tillegg lang erfaring og spisskompetanse på forretningsjus og
-                privatrett, sport, og immaterielle rettigheter.
+                <FormattedMessage id="aboutUsPage.p1" />
               </p>
               <p>
-                Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og
-                har betydelig prosedyreerfaring. Flere av våre advokater er
-                forfattere på Gyldendal Rettsdata, fagbokforfattere og
-                forelesere.
+                <FormattedMessage id="aboutUsPage.p2" />
               </p>
               <p>
-                Som klient hos Stray Vyrje møter du løsningsorienterte
-                advokater, som er dedikerte og tilgjengelige. Vi har
-                spesialistkompetanse innenfor sport og immaterielle rettigheter.
-                Kontakt oss i dag, så forteller vi mer om hva vi kan oppnå
-                sammen.
+                <FormattedMessage id="aboutUsPage.p3" />
               </p>
             </div>
             <div>
-              <SubTitle>Timepris</SubTitle>
+              <SubTitle>
+                <FormattedMessage id="aboutUsPage.fees" />
+              </SubTitle>
               <p>
-                Vår timepris utgjør i utgangspunktet kr 2.800 + mva.
-                Privatklienter belastes kr 2.240 + mva.
+                <FormattedMessage id="aboutUsPage.feesP1" />
+                <br />
+                {intl.locale === "nb" && (
+                  <FormattedMessage id="aboutUsPage.feesP2" />
+                )}
               </p>
-              <SubTitle>Nyttige lenker</SubTitle>
-              <ul>
-                <li>
-                  <a href={forretningsvilkar} target="_blank">
-                    Generelle foretningsvilkår
-                  </a>
-                </li>
-                <li>
-                  <a href={personvern} target="_blank">
-                    Personvernærklæring
-                  </a>
-                </li>
-                <li>
-                  <a href={hvitvasking} target="_blank">
-                    Hvitvaskingsrutiner
-                  </a>
-                </li>
-              </ul>
+
+              {intl.locale === "nb" && (
+                <>
+                  <SubTitle>Forretningsvilkår</SubTitle>
+                  <ul>
+                    <li>
+                      <a href={forretningsvilkar} target="_blank">
+                        Generelle forretningsvilkår
+                      </a>
+                    </li>
+                    <li>
+                      <a href={personvern} target="_blank">
+                        Personvernærklæring
+                      </a>
+                    </li>
+                    <li>
+                      <a href={hvitvasking} target="_blank">
+                        Hvitvaskingsrutiner
+                      </a>
+                    </li>
+                  </ul>
+                </>
+              )}
             </div>
           </SplitContainer>
         </PageContent>
+        {intl.locale === "nb" && (
+          <Section version="dark">
+            <PageContent>
+              <SectionTitle version="dark">Verdier</SectionTitle>
+              <Test>
+                <p>
+                  I møte med Stray Vyrje vil du oppdage at våre kjerneverdier,
+                  kvalitet, integritet og tilgjengelighet kjennetegner hvordan
+                  vi møter verden og utfører vårt arbeid. Vi etterstreber å
+                  levere kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som
+                  kan gå på bekostning av vår yrkesmessige integritet. Vi
+                  strekker oss langt for å være til stede for kollegaer og
+                  klienter.
+                </p>
+              </Test>
+            </PageContent>
+          </Section>
+        )}
 
-        <Section version="dark">
-          <PageContent>
-            <SectionTitle version="dark">Verdier</SectionTitle>
-            <Test>
-              <p>
-                I møte med Stray Vyrje vil du oppdage at våre kjerneverdier,
-                kvalitet, integritet og tilgjengelighet kjennetegner hvordan vi
-                møter verden og utfører vårt arbeid. Vi etterstreber å levere
-                kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som kan gå på
-                bekostning av vår yrkesmessige integritet. Vi strekker oss langt
-                for å være til stede for kollegaer og klienter.
-              </p>
-            </Test>
-          </PageContent>
-        </Section>
+        {intl.locale === "nb" && (
+          <Section>
+            <PageContent>
+              <SectionTitle>Miljø og samfunnsansvar</SectionTitle>
+              <SplitContainer>
+                <div>
+                  <p>
+                    Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
+                    kontinuerlig jobber med miljøtiltak i hverdagen og gjennom
+                    stiftelsens krav til bedriften ivaretas også et godt
+                    arbeidsmiljø. Gjennom kontroll av bransjetilpassede krav
+                    tildeles sertifikatet som et bevis på firmaets arbeid for et
+                    bedre miljø. Hvert tredje år må bedriften resertifiseres.
+                    Sertifikatet er godkjent av myndighetene og støttes og
+                    anbefales av Miljøverndepartementet.
+                  </p>
+                  <p>
+                    Les mer om Miljøfyrtårn her:{" "}
+                    <a href="http://www.miljofytarn.no">www.miljofytarn.no</a>
+                  </p>
+                </div>
 
-        <Section>
-          <PageContent>
-            <SectionTitle>Miljø og samfunnsansvar</SectionTitle>
-            <SplitContainer>
-              <div>
-                <p>
-                  Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
-                  kontinuerlig jobber med miljøtiltak i hverdagen og gjennom
-                  stiftelsens krav til bedriften ivaretas også et godt
-                  arbeidsmiljø. Gjennom kontroll av bransjetilpassede krav
-                  tildeles sertifikatet som et bevis på firmaets arbeid for et
-                  bedre miljø. Hvert tredje år må bedriften resertifiseres.
-                  Sertifikatet er godkjent av myndighetene og støttes og
-                  anbefales av Miljøverndepartementet.
-                </p>
-                <p>
-                  Les mer om Miljøfyrtårn her:{" "}
-                  <a href="http://www.miljofytarn.no">www.miljofytarn.no</a>
-                </p>
-              </div>
-
-              <div>
-                <p>
-                  Stray Vyrje støtter Karanba. Karanba er et sosialt prosjekt i
-                  Rio de Janeiro. Med fotball som virkemiddel hjelper Karanba et
-                  stort antall barn og unge fra slumområdene med personlig
-                  utvikling, utdanning og utfoldelse.
-                </p>
-                <p>
-                  Les mer om Karanba her:{" "}
-                  <a href="http://www.karanba.com">www.karanba.com</a>
-                </p>
-              </div>
-            </SplitContainer>
-          </PageContent>
-        </Section>
+                <div>
+                  <p>
+                    Stray Vyrje støtter Karanba. Karanba er et sosialt prosjekt
+                    i Rio de Janeiro. Med fotball som virkemiddel hjelper
+                    Karanba et stort antall barn og unge fra slumområdene med
+                    personlig utvikling, utdanning og utfoldelse.
+                  </p>
+                  <p>
+                    Les mer om Karanba her:{" "}
+                    <a href="http://www.karanba.com">www.karanba.com</a>
+                  </p>
+                </div>
+              </SplitContainer>
+            </PageContent>
+          </Section>
+        )}
       </Page>
     </Layout>
   )

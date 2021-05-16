@@ -12,6 +12,7 @@ const StyledPage = styled.div`
 
   @media ${device.laptop} {
     padding: ${spacing.xxxlarge} 0 0 0;
+    min-height: 60vh;
   }
 `
 
@@ -27,7 +28,7 @@ const StyledPageContent = styled.div`
 `
 
 export const PageHeader = styled.div`
-padding: 0 ${spacing.medium};
+  padding: 0 ${spacing.medium};
   margin: 0 0 ${spacing.xlarge} 0;
 `
 

@@ -15,12 +15,35 @@
       "p3": "Contact one of our partners today, to explore what we can achieve together."
     }
   },
+  "contactPage": {
+    "title": "Contact us",
+    "formTitle": "Leave a message and we will contact you as soon as possible",
+    "contactInformationTitle": "Contact information",
+    "firmInformationTitle": "Firm information",
+    "vatNumberLabel": "VAT number",
+    "vatNumberValue": "976570693",
+    "mapTitle": "You can find us here",
+    "openingHoursTitle": "Opening hours",
+    "openingHoursP1": "Switchboard is served on weekdays between 09.00 - 12.30 and 13.00 - 17.00",
+    "openingHoursP2": "Inquiries after office hours are directed directly to the lawyers",
+    "openingHoursP3": "For visits, contact us for an appointment"
+  },
+  "aboutUsPage": {
+    "title": "About us",
+    "p1": "Stray Vyrje assists companies, organisations and business clients within a wide range of markets. Our attorneys have extensive experience in Business and Private Law, Sports and Intellectual Property Rights.",
+    "p2": "Areas of actuation comprises of Labour, Contract and Corporate Law. In addition our lawyers have significant experience with negotiation and litigation. As a client with Stray Vyrje you will meet solution-oriented lawyers that are dedicated and available.",
+    "p3": "Contact one of our partners today, to explore what we can achieve together.",
+    "fees": "Fees",
+    "feesP1": "Our hourly rate ranges from EUR 250 – 400 (ex VAT) depending on the size and complexity of the assignment.",
+    "feesP2": ""
+  },
   "contactForm": {
     "title": "We will call you back!",
     "subTitle": "We will contact you between 08:15 and 15:45 on weekdays",
     "telephone": "Telephone",
     "email": "E-mail",
     "name": "Name",
+    "message": "Message",
     "submit": "Send"
   }
 }

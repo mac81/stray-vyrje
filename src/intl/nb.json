@@ -15,11 +15,34 @@
       "p3": "Kontakt en av våre advokater i dag, så forteller vi mer om hva vi kan oppnå sammen."
     }
   },
+  "contactPage": {
+    "title": "Kontakt oss",
+    "formTitle": "Legg igjen en beskjed så kontakter vi deg så snart vi har mulighet",
+    "contactInformationTitle": "Kontaktinformasjon",
+    "firmInformationTitle": "Firmainformasjon",
+    "vatNumberLabel": "Org nummer",
+    "vatNumberValue": "976570693",
+    "mapTitle": "Her finner du oss",
+    "openingHoursTitle": "Åpningstid",
+    "openingHoursP1": "Sentralbord betjenes ukedager mellom kl. 09.00 - 12.30 og 13.00 - 17.00",
+    "openingHoursP2": "Henvendelser etter kontortid rettes direkte til advokatene",
+    "openingHoursP3": "For besøk, kontakt oss for avtale"
+  },
+  "aboutUsPage": {
+    "title": "Om oss",
+    "p1": "Stray Vyrje bistår næringsdrivende, organisasjoner og private innenfor et bredt spekter av områder. Våre advokater har i tillegg lang erfaring og spisskompetanse på forretningsjus og privatrett, sport, og immaterielle rettigheter.",
+    "p2": "Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring. Flere av våre advokater er forfattere på Gyldendal Rettsdata, fagbokforfattere og forelesere.",
+    "p3": "Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og tilgjengelige. Vi har spesialistkompetanse innenfor sport og immaterielle rettigheter. Kontakt oss i dag, så forteller vi mer om hva vi kan oppnå sammen.",
+    "fees": "Timepris",
+    "feesP1": "Vår timepris utgjør i utgangspunktet kr 2.800 + mva.",
+    "feesP2": "Privatklienter belastes kr 2.240 + mva."
+  },
   "contactForm": {
     "title": "Vi ringer deg opp!",
     "subTitle": "Vi vil kontakte deg i løpet av dagen mellom 08:15 - 15:45 på hverdager",
     "name": "Navn",
     "email": "Epost",
+    "message": "Melding",
     "telephone": "Telefon",
     "submit": "Send"
   }

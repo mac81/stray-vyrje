@@ -1,15 +1,35 @@
-import React from 'react';
-import { Form, Input, Textarea, Button } from "./ContactForm.styled";
+import React from "react"
+import { Form, Input, Textarea, Button } from "./ContactForm.styled"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
-const ContactForm = () => (
-  <Form>
-    <input type="hidden" name="form-name" value="contact" />
-    <Input type="text" placeholder="Navn" />
-    <Input type="text" placeholder="Epost *" required />
-    <Input type="text" placeholder="Telefon" />
-    <Textarea placeholder="Melding"></Textarea>
-    <Button>Send</Button>
-  </Form>
-)
+const ContactForm = () => {
+  const intl = useIntl()
+  return (
+    <Form>
+      <input type="hidden" name="form-name" value="contact" />
+      <Input
+        type="text"
+        placeholder={intl.formatMessage({ id: "contactForm.name" })}
+      />
+      <Input
+        type="text"
+        placeholder={intl.formatMessage({ id: "contactForm.email" })}
+        required
+      />
+      <Input
+        type="text"
+        placeholder={intl.formatMessage({
+          id: "contactForm.telephone",
+        })}
+      />
+      <Textarea
+        placeholder={intl.formatMessage({
+          id: "contactForm.message",
+        })}
+      ></Textarea>
+      <Button>Send</Button>
+    </Form>
+  )
+}
 
-export default ContactForm;
+export default ContactForm
