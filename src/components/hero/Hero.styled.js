@@ -24,7 +24,7 @@ export const StyledHero = styled.div`
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(33, 37, 50, 0.95);
+    background: rgba(33, 37, 50, 0.85);
     background: ${linearGradient({
       colorStops: [
         `${rgba(colors.primary, 0.5)} 0%`,

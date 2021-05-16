@@ -8,9 +8,6 @@ import { device } from "../utils/mediaqueries"
 import { spacing } from "../utils/spacing"
 import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
-import hvitvasking from "../images/hvitvaskingsrutiner2020.pdf"
-import personvern from "../images/personvern2021.pdf"
-import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
 
 const Section = styled.section`
   background: ${props => (props.version === "dark" ? colors.primary : "#fff")};
@@ -78,54 +75,28 @@ const Menneskene = () => {
           <PageTitle>Om oss</PageTitle>
         </PageHeader>
         <PageContent>
-          <SplitContainer>
-            <div>
-              <p>
-                Stray Vyrje bistår næringsdrivende, organisasjoner og private
-                innenfor et bredt spekter av områder. Våre advokater har i
-                tillegg lang erfaring og spisskompetanse på forretningsjus og
-                privatrett, sport, og immaterielle rettigheter.
-              </p>
-              <p>
-                Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og
-                har betydelig prosedyreerfaring. Flere av våre advokater er
-                forfattere på Gyldendal Rettsdata, fagbokforfattere og
-                forelesere.
-              </p>
-              <p>
-                Som klient hos Stray Vyrje møter du løsningsorienterte
-                advokater, som er dedikerte og tilgjengelige. Vi har
-                spesialistkompetanse innenfor sport og immaterielle rettigheter.
-                Kontakt oss i dag, så forteller vi mer om hva vi kan oppnå
-                sammen.
-              </p>
-            </div>
-            <div>
-              <SubTitle>Timepris</SubTitle>
-              <p>
-                Vår timepris utgjør i utgangspunktet kr 2.800 + mva.
-                Privatklienter belastes kr 2.240 + mva.
-              </p>
-              <SubTitle>Nyttige lenker</SubTitle>
-              <ul>
-                <li>
-                  <a href={forretningsvilkar} target="_blank">
-                    Generelle foretningsvilkår
-                  </a>
-                </li>
-                <li>
-                  <a href={personvern} target="_blank">
-                    Personvernærklæring
-                  </a>
-                </li>
-                <li>
-                  <a href={hvitvasking} target="_blank">
-                    Hvitvaskingsrutiner
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </SplitContainer>
+          <p>
+            Stray Vyrje bistår næringsdrivende, organisasjoner og private
+            innenfor et bredt spekter av områder. Våre advokater har i tillegg
+            lang erfaring og spisskompetanse på forretningsjus og privatrett,
+            sport, og immaterielle rettigheter.
+          </p>
+          <p>
+            Vi arbeider bl.a. med arbeids-, kontrakts- og selskapsrett, og har
+            betydelig prosedyreerfaring. Flere av våre advokater er forfattere
+            på Gyldendal Rettsdata, fagbokforfattere og forelesere.
+          </p>
+          <p>
+            Som klient hos Stray Vyrje møter du løsningsorienterte advokater,
+            som er dedikerte og tilgjengelige. Vi har spesialistkompetanse
+            innenfor sport og immaterielle rettigheter. Kontakt oss i dag, så
+            forteller vi mer om hva vi kan oppnå sammen.
+          </p>
+          <SubTitle>Timepris</SubTitle>
+          <p>
+            Vår timepris utgjør i utgangspunktet kr 2.800 + mva. Privatklienter
+            belastes kr 2.240 + mva.
+          </p>
         </PageContent>
 
         <Section version="dark">
