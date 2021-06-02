@@ -50,11 +50,6 @@ export const query = graphql`
             html
           }
         }
-        icon {
-          fluid(maxWidth: 980) {
-            ...GatsbyContentfulFluid
-          }
-        }
       }
     }
   }

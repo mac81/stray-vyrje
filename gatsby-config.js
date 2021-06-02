@@ -17,7 +17,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-transformer-remark`
+      resolve: `gatsby-transformer-remark`,
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -35,20 +35,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `gudea`,
-          `roboto\:300,400,500`
-        ],
-        display: 'swap'
-      }
+        fonts: [`gudea`, `roboto\:300,400,500`],
+        display: "swap",
+      },
     },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /icons/
-        }
-      }
+          include: /icons/,
+        },
+      },
     },
     {
       resolve: `gatsby-source-contentful`,
@@ -70,7 +67,14 @@ module.exports = {
         // option to redirect to `/en` when connecting `/`
         redirect: true,
       },
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "G-W68P02FRXW",
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
