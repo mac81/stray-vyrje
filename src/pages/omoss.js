@@ -157,21 +157,21 @@ const Menneskene = () => {
               <SplitContainer>
                 <div>
                   <p>
-                    Advokatfirmaet Stray Vyrje & Co AS er
-                    Miljøfyrtårn-sertifisert og jobber målrettet med å redusere
-                    vårt totale miljø og klimaavtrykk. Den påvirkningen vår
-                    virksomhet daglig medfører direkte, med ressursforbruk,
-                    forurensning og avfall er noe begrenset, men både ønskelig
-                    og fullt mulig å forbedre gjennom konkrete tiltak. Stray
-                    Vyrje & Co har derfor fastsatte miljøkrav og arbeidet med
-                    disse er en integrert del av den daglige driften og henger
-                    tett sammen med firmaets øvrige verdier. Vi har identifisert
-                    miljøtiltak innen områdene: Energi, transport, avfall og
-                    innkjøp. Vi måler og reviderer løpende vårt miljøarbeid i
-                    henhold til fastsatte planer og krav, og ønsker å bidra til
-                    et grønt skifte gjennom å stille krav til våre leverandører
-                    og velge klimapositive løsninger. I tillegg har vi fokus på
-                    FNs bærekraftsmål og da spesielt bærekraftsmål nr. 16 «Fred,
+                    Advokatfirmaet Stray Vyrje & Co er Miljøfyrtårn-sertifisert
+                    og jobber målrettet med å redusere vårt totale miljø og
+                    klimaavtrykk. Den påvirkningen vår virksomhet daglig
+                    medfører direkte, med ressursforbruk, forurensning og avfall
+                    er noe begrenset, men både ønskelig og fullt mulig å
+                    forbedre gjennom konkrete tiltak. Stray Vyrje & Co har
+                    derfor fastsatte miljøkrav og arbeidet med disse er en
+                    integrert del av den daglige driften og henger tett sammen
+                    med firmaets øvrige verdier. Vi har identifisert miljøtiltak
+                    innen områdene: Energi, transport, avfall og innkjøp. Vi
+                    måler og reviderer løpende vårt miljøarbeid i henhold til
+                    fastsatte planer og krav, og ønsker å bidra til et grønt
+                    skifte gjennom å stille krav til våre leverandører og velge
+                    klimapositive løsninger. I tillegg har vi fokus på FNs
+                    bærekraftsmål og da spesielt bærekraftsmål nr. 16 «Fred,
                     rettferdighet og velfungerende institusjoner» og
                     bærekraftsmål nr. 17 «Samarbeid for å nå målene» Som
                     advokatfirma og på bakgrunn av våre verdier ønsker vi
