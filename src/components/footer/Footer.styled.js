@@ -127,29 +127,20 @@ export const Info = styled.div`
   ${StyledText({ fontSize: FONT_SIZE.SMALL })};
 
   > div {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
     span {
       padding: 0 10px;
     }
 
     a {
-      display: flex;
+      /* display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center; */
       margin: 0 10px;
-    }
-
-    @media ${device.laptop} {
-      flex-direction: row;
-
-      span:after {
-        content: "|";
-        padding-left: 10px;
-      }
     }
   }
 
@@ -171,4 +162,26 @@ export const Info = styled.div`
     margin: 0 auto;
     padding: 0 ${spacing.xxlarge};
   }
+`
+
+export const Bar = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+
+    span:after {
+      content: "|";
+      padding-left: 10px;
+    }
+  }
+`
+
+export const Logos = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 `

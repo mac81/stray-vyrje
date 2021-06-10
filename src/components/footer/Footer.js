@@ -10,6 +10,8 @@ import {
   Input,
   Button,
   Info,
+  Bar,
+  Logos,
 } from "./Footer.styled"
 import logo from "../../images/logo.png"
 import { Link } from "gatsby"
@@ -77,30 +79,33 @@ const Footer = ({ intl }) => {
         </Section>
       </Container>
       <Info>
-        <div>
+        <Bar>
           <span>Stray Vyrje & Co DA Advokatfirma</span>
           <span>Drammensveien 123 Postboks 520 Skøyen, 0214 Oslo </span>
           <span>(+47) 23 08 50 10</span>
           <span>post@svco.no</span>
+          <Logos>
+            <a
+              href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"
+              target="_blank"
+            >
+              <LinkedIn />
+            </a>
 
-          <a
-            href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"
-            target="_blank"
-          >
-            <LinkedIn />
+            <a
+              href="https://www.facebook.com/Stray-Vyrje-Co-DA-Advokatfirma-124511097625943/"
+              target="_blank"
+            >
+              <Facebook />
+            </a>
+          </Logos>
+        </Bar>
+        <Logos>
+          <a href="http://www.iurisgal.com" target="_blank">
+            <img src={logo2} />
           </a>
-
-          <a
-            href="https://www.facebook.com/Stray-Vyrje-Co-DA-Advokatfirma-124511097625943/"
-            target="_blank"
-          >
-            <Facebook />
-          </a>
-        </div>
-        <a href="http://www.iurisgal.com" target="_blank">
-          <img src={logo2} />
-        </a>
-        <img src={logo3} />
+          <img src={logo3} />
+        </Logos>
       </Info>
     </StyledFooter>
   )
