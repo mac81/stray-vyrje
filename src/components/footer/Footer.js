@@ -15,6 +15,7 @@ import logo from "../../images/logo.png"
 import { Link } from "gatsby"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import logo2 from "../../images/logoiurisgalblanco.png"
+import logo3 from "../../images/miljofyrtarnhvit.png"
 import LinkedIn from "../../icons/linkedIn.svg"
 import Facebook from "../../icons/facebook.svg"
 
@@ -99,6 +100,7 @@ const Footer = ({ intl }) => {
         <a href="http://www.iurisgal.com" target="_blank">
           <img src={logo2} />
         </a>
+        <img src={logo3} />
       </Info>
     </StyledFooter>
   )

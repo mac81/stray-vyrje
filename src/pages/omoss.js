@@ -153,11 +153,32 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section>
             <PageContent>
-              <SectionTitle>Miljø og samfunnsansvar</SectionTitle>
+              <SectionTitle>Miljøpolicy & samfunnsansvar</SectionTitle>
               <SplitContainer>
                 <div>
                   <p>
-                    Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
+                    Advokatfirmaet Stray Vyrje & Co AS er
+                    Miljøfyrtårn-sertifisert og jobber målrettet med å redusere
+                    vårt totale miljø og klimaavtrykk. Den påvirkningen vår
+                    virksomhet daglig medfører direkte, med ressursforbruk,
+                    forurensning og avfall er noe begrenset, men både ønskelig
+                    og fullt mulig å forbedre gjennom konkrete tiltak. Stray
+                    Vyrje & Co har derfor fastsatte miljøkrav og arbeidet med
+                    disse er en integrert del av den daglige driften og henger
+                    tett sammen med firmaets øvrige verdier. Vi har identifisert
+                    miljøtiltak innen områdene: Energi, transport, avfall og
+                    innkjøp. Vi måler og reviderer løpende vårt miljøarbeid i
+                    henhold til fastsatte planer og krav, og ønsker å bidra til
+                    et grønt skifte gjennom å stille krav til våre leverandører
+                    og velge klimapositive løsninger. I tillegg har vi fokus på
+                    FNs bærekraftsmål og da spesielt bærekraftsmål nr. 16 «Fred,
+                    rettferdighet og velfungerende institusjoner» og
+                    bærekraftsmål nr. 17 «Samarbeid for å nå målene» Som
+                    advokatfirma og på bakgrunn av våre verdier ønsker vi
+                    gjennom vårt virke å bidra til oppnåelse av disse målene.
+                  </p>
+                  {/* <p>
+                    Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
                     kontinuerlig jobber med miljøtiltak i hverdagen og gjennom
                     stiftelsens krav til bedriften ivaretas også et godt
                     arbeidsmiljø. Gjennom kontroll av bransjetilpassede krav
@@ -165,7 +186,7 @@ const Menneskene = () => {
                     bedre miljø. Hvert tredje år må bedriften resertifiseres.
                     Sertifikatet er godkjent av myndighetene og støttes og
                     anbefales av Miljøverndepartementet.
-                  </p>
+                  </p> */}
                   <p>
                     Les mer om Miljøfyrtårn her:{" "}
                     <a href="http://www.miljofytarn.no">www.miljofytarn.no</a>
