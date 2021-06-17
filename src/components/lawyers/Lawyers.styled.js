@@ -61,22 +61,18 @@ export const Cards = styled.div`
 export const Card = styled(Link)`
   position: relative;
 
-
-
-
   &:hover {
     .card-content {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    &:before {
-      transform: translate3d(0, 0, 0);
-    }
-    &:after {
-      transform: translate3d(0, 0, 0);
-    }
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+      &:before {
+        transform: translate3d(0, 0, 0);
+      }
+      &:after {
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
-
-   
 `
 
 export const CardContent = styled.div`
@@ -87,7 +83,7 @@ export const CardContent = styled.div`
   flex-direction: column;
   align-items: center;
   padding: ${spacing.medium} ${spacing.large};
-  background-color: ${colors.primary};
+  background-color: ${colors.secondary};
   overflow: hidden;
 
   &:before {
@@ -100,7 +96,7 @@ export const CardContent = styled.div`
     z-index: 1;
     background-color: ${colors.highlight};
     transform: translate3d(-100%, 100%, 0);
-    transition: all 800ms cubic-bezier(.25,.8,.25,1);
+    transition: all 800ms cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
   &:after {
@@ -113,7 +109,7 @@ export const CardContent = styled.div`
     z-index: 1;
     background-color: ${colors.highlight};
     transform: translate3d(100%, -100%, 0);
-    transition: all 800ms cubic-bezier(.25,.8,.25,1);
+    transition: all 800ms cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 `
 

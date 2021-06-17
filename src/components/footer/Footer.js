@@ -104,7 +104,9 @@ const Footer = ({ intl }) => {
           <a href="http://www.iurisgal.com" target="_blank">
             <img src={logo2} />
           </a>
-          <img src={logo3} />
+          <a href="http://www.miljofyrtarn.no " target="_blank">
+            <img src={logo3} />
+          </a>
         </Logos>
       </Info>
     </StyledFooter>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colors } from "../../utils/colors"
-import { spacing } from "../../utils/spacing";
+import { spacing } from "../../utils/spacing"
 import { device } from "../../utils/mediaqueries"
 
 export const StyledHeader = styled.header`
@@ -10,9 +10,11 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: ${props => props.$displayBackground && colors.primary};
-  box-shadow: ${props => props.$displayBackground && "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"};
-  
+  background-color: ${props => props.$displayBackground && colors.secondary};
+  box-shadow: ${props =>
+    props.$displayBackground &&
+    "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"};
+
   @media ${device.laptop} {
     height: 80px;
   }
@@ -30,8 +32,7 @@ export const Container = styled.div`
   @media ${device.laptop} {
     padding: 0 ${spacing.xxlarge};
   }
-  
-`;
+`
 
 export const Logo = styled.img`
   float: left;
@@ -39,6 +40,4 @@ export const Logo = styled.img`
   margin: 0;
 `
 
-export const MenuContainer = styled.div`
-  
-`
+export const MenuContainer = styled.div``

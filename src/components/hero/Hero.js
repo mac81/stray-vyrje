@@ -28,9 +28,9 @@ const Hero = ({ intl }) => {
             <Action to="/menneskene">
               <FormattedMessage id="menu.peoples" />
             </Action>
-            <Action to="/kontakt">
+            {/* <Action to="/kontakt">
               <FormattedMessage id="menu.contact" />
-            </Action>
+            </Action> */}
           </Actions>
         </Card>
       </Container>

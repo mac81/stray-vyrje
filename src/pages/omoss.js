@@ -10,11 +10,13 @@ import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
 import hvitvasking from "../images/hvitvaskingsrutiner2020.pdf"
 import personvern from "../images/personvern2021.pdf"
+import miljofyrtarn from "../images/miljofyrtarn.pdf"
 import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const Section = styled.section`
-  background: ${props => (props.version === "dark" ? colors.primary : "#fff")};
+  background: ${props =>
+    props.version === "dark" ? colors.secondary : "#fff"};
 `
 
 const SectionTitle = styled.h2`
@@ -25,7 +27,7 @@ const SectionTitle = styled.h2`
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  color: ${props => (props.version === "dark" ? "#fff" : colors.primary)};
+  color: ${props => (props.version === "dark" ? "#fff" : colors.text)};
 
   &:after {
     content: "";
@@ -153,30 +155,18 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section>
             <PageContent>
-              <SectionTitle>Miljøpolicy & samfunnsansvar</SectionTitle>
+              <SectionTitle>Miljø & samfunnsansvar</SectionTitle>
               <SplitContainer>
                 <div>
                   <p>
-                    Advokatfirmaet Stray Vyrje & Co er Miljøfyrtårn-sertifisert
-                    og jobber målrettet med å redusere vårt totale miljø og
-                    klimaavtrykk. Den påvirkningen vår virksomhet daglig
-                    medfører direkte, med ressursforbruk, forurensning og avfall
-                    er noe begrenset, men både ønskelig og fullt mulig å
-                    forbedre gjennom konkrete tiltak. Stray Vyrje & Co har
-                    derfor fastsatte miljøkrav og arbeidet med disse er en
-                    integrert del av den daglige driften og henger tett sammen
-                    med firmaets øvrige verdier. Vi har identifisert miljøtiltak
-                    innen områdene: Energi, transport, avfall og innkjøp. Vi
-                    måler og reviderer løpende vårt miljøarbeid i henhold til
-                    fastsatte planer og krav, og ønsker å bidra til et grønt
-                    skifte gjennom å stille krav til våre leverandører og velge
-                    klimapositive løsninger. I tillegg har vi fokus på FNs
-                    bærekraftsmål og da spesielt bærekraftsmål nr. 16 «Fred,
-                    rettferdighet og velfungerende institusjoner» og
-                    bærekraftsmål nr. 17 «Samarbeid for å nå målene» Som
-                    advokatfirma og på bakgrunn av våre verdier ønsker vi
-                    gjennom vårt virke å bidra til oppnåelse av disse målene.
+                    Stray Vyrje er sertifisert Miljøfyrtårn-bedrift. Du kan lese
+                    mer om vår miljøpolicy og våre miljømål{" "}
+                    <a href={miljofyrtarn} target="_blank">
+                      her
+                    </a>
+                    .
                   </p>
+                  <p></p>
                   {/* <p>
                     Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
                     kontinuerlig jobber med miljøtiltak i hverdagen og gjennom
@@ -188,7 +178,7 @@ const Menneskene = () => {
                     anbefales av Miljøverndepartementet.
                   </p> */}
                   <p>
-                    Les mer om Miljøfyrtårn her:{" "}
+                    Ønsker du å vite mer om stiftelsen Miljøfyrtårn?{" "}
                     <a href="http://www.miljofytarn.no">www.miljofytarn.no</a>
                   </p>
                 </div>
@@ -197,8 +187,8 @@ const Menneskene = () => {
                   <p>
                     Stray Vyrje støtter Karanba. Karanba er et sosialt prosjekt
                     i Rio de Janeiro. Med fotball som virkemiddel hjelper
-                    Karanba et stort antall barn og unge fra slumområdene med
-                    personlig utvikling, utdanning og utfoldelse.
+                    Karanba barn og unge fra slumområdene med personlig
+                    utvikling, utdanning og utfoldelse.
                   </p>
                   <p>
                     Les mer om Karanba her:{" "}
