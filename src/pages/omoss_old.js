@@ -13,6 +13,8 @@ import personvern from "../images/personvern2021.pdf"
 import miljofyrtarn from "../images/miljofyrtarn.pdf"
 import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const Section = styled.section`
   background: ${props =>
@@ -74,43 +76,60 @@ const Test = styled.div`
 
 const Menneskene = () => {
   const intl = useIntl()
+  const data = useStaticQuery(
+    graphql`
+      query  {
+        contentfulSideOmOss {
+          id
+          title
+          titleBusinessTerms
+          titleEnvironment
+          titleFees
+          titleValues
+          aboutUs { 
+            raw
+          }
+          bodyFees { 
+            raw
+          }
+          bodyValues{ 
+            raw
+          }
+          bodyEnvironment {
+            raw
+          }
+          bodyKaranba {
+            raw
+          }
+        }
+      }
+    `
+  )
+  
   return (
     <Layout>
       <Seo title="Om oss" />
       <Page>
         <PageHeader>
           <PageTitle>
-            <FormattedMessage id="aboutUsPage.title" />
+            {data.contentfulSideOmOss.title}
           </PageTitle>
         </PageHeader>
         <PageContent>
           <SplitContainer>
             <div>
-              <p>
-                <FormattedMessage id="aboutUsPage.p1" />
-              </p>
-              <p>
-                <FormattedMessage id="aboutUsPage.p2" />
-              </p>
-              <p>
-                <FormattedMessage id="aboutUsPage.p3" />
-              </p>
+            {data.contentfulSideOmOss.aboutUs && renderRichText(data.contentfulSideOmOss.aboutUs)}
+            
             </div>
             <div>
               <SubTitle>
-                <FormattedMessage id="aboutUsPage.fees" />
+              {data.contentfulSideOmOss.titleFees}
               </SubTitle>
-              <p>
-                <FormattedMessage id="aboutUsPage.feesP1" />
-                <br />
-                {intl.locale === "nb" && (
-                  <FormattedMessage id="aboutUsPage.feesP2" />
-                )}
-              </p>
+              {data.contentfulSideOmOss.bodyFees && renderRichText(data.contentfulSideOmOss.bodyFees)}
 
               {intl.locale === "nb" && (
                 <>
-                  <SubTitle>Forretningsvilkår</SubTitle>
+                  <SubTitle> {data.contentfulSideOmOss.titleBusinessTerms}</SubTitle>
                   <ul>
                     <li>
                       <a href={forretningsvilkar} target="_blank">
@@ -136,17 +155,9 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section version="dark">
             <PageContent>
-              <SectionTitle version="dark">Verdier</SectionTitle>
+              <SectionTitle version="dark"> {data.contentfulSideOmOss.titleValues}</SectionTitle>
               <Test>
-                <p>
-                  I møte med Stray Vyrje vil du oppdage at våre kjerneverdier,
-                  kvalitet, integritet og tilgjengelighet kjennetegner hvordan
-                  vi møter verden og utfører vårt arbeid. Vi etterstreber å
-                  levere kvalitet i våre oppdrag, vi påtar oss ikke oppdrag som
-                  kan gå på bekostning av vår yrkesmessige integritet. Vi
-                  strekker oss langt for å være til stede for kollegaer og
-                  klienter.
-                </p>
+              {data.contentfulSideOmOss.bodyValues && renderRichText(data.contentfulSideOmOss.bodyValues)}
               </Test>
             </PageContent>
           </Section>
@@ -155,45 +166,14 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section>
             <PageContent>
-              <SectionTitle>Miljø & samfunnsansvar</SectionTitle>
+              <SectionTitle> {data.contentfulSideOmOss.titleEnvironment}</SectionTitle>
               <SplitContainer>
                 <div>
-                  <p>
-                    Stray Vyrje er sertifisert Miljøfyrtårn-bedrift. Du kan lese
-                    mer om vår miljøpolicy og våre miljømål{" "}
-                    <a href={miljofyrtarn} target="_blank">
-                      her
-                    </a>
-                    .
-                  </p>
-                  <p></p>
-                  {/* <p>
-                    Stray Vyrje er en Miljøfyrtårn-bedrift. Dette betyr at vi
-                    kontinuerlig jobber med miljøtiltak i hverdagen og gjennom
-                    stiftelsens krav til bedriften ivaretas også et godt
-                    arbeidsmiljø. Gjennom kontroll av bransjetilpassede krav
-                    tildeles sertifikatet som et bevis på firmaets arbeid for et
-                    bedre miljø. Hvert tredje år må bedriften resertifiseres.
-                    Sertifikatet er godkjent av myndighetene og støttes og
-                    anbefales av Miljøverndepartementet.
-                  </p> */}
-                  <p>
-                    Ønsker du å vite mer om stiftelsen Miljøfyrtårn?{" "}
-                    <a href="http://www.miljofytarn.no">www.miljofytarn.no</a>
-                  </p>
+                {data.contentfulSideOmOss.bodyEnvironment && renderRichText(data.contentfulSideOmOss.bodyEnvironment)}
                 </div>
 
                 <div>
-                  <p>
-                    Stray Vyrje støtter Karanba. Karanba er et sosialt prosjekt
-                    i Rio de Janeiro. Med fotball som virkemiddel hjelper
-                    Karanba barn og unge fra slumområdene med personlig
-                    utvikling, utdanning og utfoldelse.
-                  </p>
-                  <p>
-                    Les mer om Karanba her:{" "}
-                    <a href="http://www.karanba.com">www.karanba.com</a>
-                  </p>
+                {data.contentfulSideOmOss.bodyKaranba && renderRichText(data.contentfulSideOmOss.bodyKaranba)}
                 </div>
               </SplitContainer>
             </PageContent>

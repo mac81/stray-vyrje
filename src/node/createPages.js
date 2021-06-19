@@ -2,7 +2,7 @@ const path = require("path")
 
 const createPages = async ({ graphql, actions: { createPage } }) => {
   const {
-    data: { lawyers, services, servicesPage, peoples },
+    data: { lawyers, services, servicesPage, peoples, aboutUsPage },
   } = await graphql(`
     {
       lawyers: allContentfulAdvokat {
@@ -58,14 +58,46 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
           title
           id
           node_locale
-          
         }
       }
       peoples: allContentfulSideAdvokater {
         nodes {
           title
           id
-          node_locale 
+          node_locale
+        }
+      }
+      aboutUsPage: allContentfulSideOmOss {
+        nodes {
+          id
+          node_locale
+          title
+          titleBusinessTerms
+          titleEnvironment
+          titleFees
+          titleValues
+          aboutUs {
+            raw
+          }
+          bodyFees {
+            raw
+          }
+          bodyValues {
+            raw
+          }
+          bodyEnvironment {
+            raw
+          }
+          bodyKaranba {
+            raw
+          }
+          bodyBusinessTerms {
+            title
+            file {
+              url
+              fileName
+            }
+          }
         }
       }
     }
@@ -80,7 +112,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
         component: lawyerTemplate,
         context: {
           id,
-          slug
+          slug,
         },
       })
     )
@@ -95,7 +127,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
         component: serviceTemplate,
         context: {
           id,
-          slug
+          slug,
         },
       })
     )
@@ -109,7 +141,7 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
         path: `/arbeidsfelt`,
         component: servicePageTemplate,
         context: {
-          id
+          id,
         },
       })
     )
@@ -123,7 +155,21 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
         path: `/menneskene`,
         component: peoplesTemplate,
         context: {
-          id
+          id,
+        },
+      })
+    )
+  }
+
+  if (aboutUsPage) {
+    const aboutUsTemplate = path.resolve("./src/templates/aboutUs.js")
+
+    aboutUsPage.nodes.forEach(({ id }) =>
+      createPage({
+        path: `/omoss`,
+        component: aboutUsTemplate,
+        context: {
+          id,
         },
       })
     )

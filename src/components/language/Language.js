@@ -42,7 +42,8 @@ const Languages = styled.ul`
   width: 100%;
   z-index: 4;
   list-style-type: none;
-  /* background-color: ${colors.primary}; */
+  background-color: ${colors.secondary};
+  border-radius: 3px;
   margin: 0;
   padding: 0;
 
@@ -87,7 +88,7 @@ const Language = () => {
             <ToggleLanguage
               onClick={() => setDisplayLanguages(!displayLanguages)}
             >
-              {currentLocale === "nb" ? <NorwegianFlag /> : <EnglishFlag />}
+              {currentLocale === "nb" ? "NO" : "EN"}
               {/* {languageName[currentLocale]} */}
               <ArrowIcon />
             </ToggleLanguage>
@@ -101,11 +102,7 @@ const Language = () => {
                         key={language}
                         onClick={() => changeLocale(language)}
                       >
-                        {language === "nb" ? (
-                          <NorwegianFlag />
-                        ) : (
-                          <EnglishFlag />
-                        )}
+                        {language === "nb" ? "NO" : "EN"}
                         {/* {languageName[language]} */}
                       </LanguageLink>
                     </li>
