@@ -8,12 +8,7 @@ import { device } from "../utils/mediaqueries"
 import { spacing } from "../utils/spacing"
 import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
-import hvitvasking from "../images/hvitvaskingsrutiner2020.pdf"
-import personvern from "../images/personvern2021.pdf"
-import miljofyrtarn from "../images/miljofyrtarn.pdf"
-import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const Section = styled.section`
@@ -108,26 +103,15 @@ const AboutUs = ({ data, pageContext }) => {
                   <ul>
                     {aboutUsData.bodyBusinessTerms.map(reference => (
                       <li>
-                        <a href={reference.file.url} target="_blank">
+                        <a
+                          href={reference.file.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           {reference.title}
                         </a>
                       </li>
                     ))}
-                    {/* <li>
-                      <a href={forretningsvilkar} target="_blank">
-                        Generelle forretningsvilkår
-                      </a>
-                    </li>
-                    <li>
-                      <a href={personvern} target="_blank">
-                        Personvernærklæring
-                      </a>
-                    </li>
-                    <li>
-                      <a href={hvitvasking} target="_blank">
-                        Hvitvaskingsrutiner
-                      </a>
-                    </li> */}
                   </ul>
                 </>
               )}

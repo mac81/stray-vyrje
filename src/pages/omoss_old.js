@@ -10,9 +10,8 @@ import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
 import hvitvasking from "../images/hvitvaskingsrutiner2020.pdf"
 import personvern from "../images/personvern2021.pdf"
-import miljofyrtarn from "../images/miljofyrtarn.pdf"
 import forretningsvilkar from "../images/forretningsvilkar2020.pdf"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
@@ -78,7 +77,7 @@ const Menneskene = () => {
   const intl = useIntl()
   const data = useStaticQuery(
     graphql`
-      query  {
+      query {
         contentfulSideOmOss {
           id
           title
@@ -86,13 +85,13 @@ const Menneskene = () => {
           titleEnvironment
           titleFees
           titleValues
-          aboutUs { 
+          aboutUs {
             raw
           }
-          bodyFees { 
+          bodyFees {
             raw
           }
-          bodyValues{ 
+          bodyValues {
             raw
           }
           bodyEnvironment {
@@ -105,44 +104,48 @@ const Menneskene = () => {
       }
     `
   )
-  
+
   return (
     <Layout>
       <Seo title="Om oss" />
       <Page>
         <PageHeader>
-          <PageTitle>
-            {data.contentfulSideOmOss.title}
-          </PageTitle>
+          <PageTitle>{data.contentfulSideOmOss.title}</PageTitle>
         </PageHeader>
         <PageContent>
           <SplitContainer>
             <div>
-            {data.contentfulSideOmOss.aboutUs && renderRichText(data.contentfulSideOmOss.aboutUs)}
-            
+              {data.contentfulSideOmOss.aboutUs &&
+                renderRichText(data.contentfulSideOmOss.aboutUs)}
             </div>
             <div>
-              <SubTitle>
-              {data.contentfulSideOmOss.titleFees}
-              </SubTitle>
-              {data.contentfulSideOmOss.bodyFees && renderRichText(data.contentfulSideOmOss.bodyFees)}
+              <SubTitle>{data.contentfulSideOmOss.titleFees}</SubTitle>
+              {data.contentfulSideOmOss.bodyFees &&
+                renderRichText(data.contentfulSideOmOss.bodyFees)}
 
               {intl.locale === "nb" && (
                 <>
-                  <SubTitle> {data.contentfulSideOmOss.titleBusinessTerms}</SubTitle>
+                  <SubTitle>
+                    {" "}
+                    {data.contentfulSideOmOss.titleBusinessTerms}
+                  </SubTitle>
                   <ul>
                     <li>
-                      <a href={forretningsvilkar} target="_blank">
+                      <a
+                        href={forretningsvilkar}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Generelle forretningsvilkår
                       </a>
                     </li>
                     <li>
-                      <a href={personvern} target="_blank">
+                      <a href={personvern} target="_blank" rel="noreferrer">
                         Personvernærklæring
                       </a>
                     </li>
                     <li>
-                      <a href={hvitvasking} target="_blank">
+                      <a href={hvitvasking} target="_blank" rel="noreferrer">
                         Hvitvaskingsrutiner
                       </a>
                     </li>
@@ -155,9 +158,13 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section version="dark">
             <PageContent>
-              <SectionTitle version="dark"> {data.contentfulSideOmOss.titleValues}</SectionTitle>
+              <SectionTitle version="dark">
+                {" "}
+                {data.contentfulSideOmOss.titleValues}
+              </SectionTitle>
               <Test>
-              {data.contentfulSideOmOss.bodyValues && renderRichText(data.contentfulSideOmOss.bodyValues)}
+                {data.contentfulSideOmOss.bodyValues &&
+                  renderRichText(data.contentfulSideOmOss.bodyValues)}
               </Test>
             </PageContent>
           </Section>
@@ -166,14 +173,19 @@ const Menneskene = () => {
         {intl.locale === "nb" && (
           <Section>
             <PageContent>
-              <SectionTitle> {data.contentfulSideOmOss.titleEnvironment}</SectionTitle>
+              <SectionTitle>
+                {" "}
+                {data.contentfulSideOmOss.titleEnvironment}
+              </SectionTitle>
               <SplitContainer>
                 <div>
-                {data.contentfulSideOmOss.bodyEnvironment && renderRichText(data.contentfulSideOmOss.bodyEnvironment)}
+                  {data.contentfulSideOmOss.bodyEnvironment &&
+                    renderRichText(data.contentfulSideOmOss.bodyEnvironment)}
                 </div>
 
                 <div>
-                {data.contentfulSideOmOss.bodyKaranba && renderRichText(data.contentfulSideOmOss.bodyKaranba)}
+                  {data.contentfulSideOmOss.bodyKaranba &&
+                    renderRichText(data.contentfulSideOmOss.bodyKaranba)}
                 </div>
               </SplitContainer>
             </PageContent>

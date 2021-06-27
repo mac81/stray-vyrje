@@ -1,6 +1,6 @@
 import React from "react"
 import { Form, Input, Textarea, Button } from "./ContactForm.styled"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 const ContactForm = () => {
   const intl = useIntl()

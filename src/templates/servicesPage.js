@@ -3,12 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Services from "../components/services/Services"
 import { graphql } from "gatsby"
-import Page, {
-  PageTitle,
-  PageSubTitle,
-  PageHeader,
-  PageContent,
-} from "../components/page"
+import Page, { PageTitle, PageHeader, PageContent } from "../components/page"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const ServicesPage = ({ data }) => {
@@ -26,7 +21,6 @@ const ServicesPage = ({ data }) => {
               data?.contentfulSideArbeidsfelt?.title
             )}
           </PageTitle>
-          {/* <PageSubTitle>{intl.locale === "pt" ? <FormattedMessage id="pages.expertise.subTitle" /> : data?.contentfulSideArbeidsfelt?.subTitle}</PageSubTitle> */}
         </PageHeader>
         <PageContent>
           <Services data={data?.contentfulSideArbeidsfelt} />

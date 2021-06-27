@@ -8,7 +8,7 @@ import { spacing } from "../utils/spacing"
 import { colors } from "../utils/colors"
 import { device } from "../utils/mediaqueries"
 import ContactForm from "../components/contactForm/ContactForm"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 const Sections = styled.div`
   @media ${device.laptop} {
@@ -56,7 +56,6 @@ const SectionTitle = styled.h2`
 `
 
 const ContactPage = () => {
-  const intl = useIntl()
   return (
     <Layout>
       <Seo title="Kontakt oss" />

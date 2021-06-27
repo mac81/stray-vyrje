@@ -4,8 +4,6 @@ import Seo from "../components/seo"
 
 import styled from "styled-components"
 import { FONT_SIZE, StyledText } from "../utils/typography"
-import { device } from "../utils/mediaqueries"
-import { spacing } from "../utils/spacing"
 import { colors } from "../utils/colors"
 import Page, { PageContent, PageHeader, PageTitle } from "../components/page"
 

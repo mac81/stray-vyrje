@@ -5,11 +5,11 @@ import { colors } from "../../utils/colors"
 import { StyledText, FONT_SIZE } from "../../utils/typography"
 import Test from "../../icons/arrow-down.svg"
 
-const languageName = {
-  en: "English",
-  nb: "Norsk",
-  pt: "Portuguese",
-}
+// const languageName = {
+//   en: "English",
+//   nb: "Norsk",
+//   pt: "Portuguese",
+// }
 
 const LanguageWrapper = styled.div`
   position: relative;
@@ -70,13 +70,13 @@ const ArrowIcon = styled(Test)`
   margin-right: 0 !important;
 `
 
-const NorwegianFlag = () => (
-  <img src="https://hatscripts.github.io/circle-flags/flags/no.svg" />
-)
+// const NorwegianFlag = () => (
+//   <img src="https://hatscripts.github.io/circle-flags/flags/no.svg" />
+// )
 
-const EnglishFlag = () => (
-  <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" />
-)
+// const EnglishFlag = () => (
+//   <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" />
+// )
 
 const Language = () => {
   const [displayLanguages, setDisplayLanguages] = useState(false)
@@ -89,7 +89,7 @@ const Language = () => {
               onClick={() => setDisplayLanguages(!displayLanguages)}
             >
               {currentLocale === "nb" ? "NO" : "EN"}
-              {/* {languageName[currentLocale]} */}
+
               <ArrowIcon />
             </ToggleLanguage>
             {displayLanguages && (
@@ -103,7 +103,6 @@ const Language = () => {
                         onClick={() => changeLocale(language)}
                       >
                         {language === "nb" ? "NO" : "EN"}
-                        {/* {languageName[language]} */}
                       </LanguageLink>
                     </li>
                   ))}

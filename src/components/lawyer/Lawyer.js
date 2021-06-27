@@ -13,10 +13,9 @@ import {
 } from "./Lawyer.styled"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from "gatsby-image"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
-export const Lawyer = ({ data, locale }) => {
-  const intl = useIntl()
+export const Lawyer = ({ data }) => {
   return (
     <Wrapper>
       <Container>

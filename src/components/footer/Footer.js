@@ -4,11 +4,8 @@ import {
   Container,
   Section,
   Logo,
-  SectionTitle,
   SectionExcerpt,
   SectionContent,
-  Input,
-  Button,
   Info,
   Bar,
   Logos,
@@ -21,7 +18,7 @@ import logo3 from "../../images/miljofyrtarnhvit.png"
 import LinkedIn from "../../icons/linkedIn.svg"
 import Facebook from "../../icons/facebook.svg"
 
-const Footer = ({ intl }) => {
+const Footer = () => {
   return (
     <StyledFooter>
       <Container>
@@ -44,39 +41,6 @@ const Footer = ({ intl }) => {
             </p>
           </SectionContent>
         </Section>
-        {/* <Section>
-          <SectionTitle as="h3">
-            <FormattedMessage id="contactForm.title" />
-          </SectionTitle>
-          <p>
-            <FormattedMessage id="contactForm.subTitle" />
-          </p>
-          <SectionContent>
-            <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="callback" />
-              <Input
-                type="text"
-                placeholder={intl.formatMessage({ id: "contactForm.name" })}
-                name="name"
-                required
-              />
-              <Input
-                type="text"
-                placeholder={intl.formatMessage({ id: "contactForm.email" })}
-                name="email"
-              />
-              <Input
-                type="text"
-                placeholder={intl.formatMessage({
-                  id: "contactForm.telephone",
-                })}
-                name="telephone"
-                required
-              />
-              <Button type="submit">Send</Button>
-            </form>
-          </SectionContent>
-        </Section> */}
       </Container>
       <Info>
         <Bar>
@@ -99,24 +63,30 @@ const Footer = ({ intl }) => {
             <a
               href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"
               target="_blank"
+              rel="noreferrer"
             >
-              <LinkedIn />
+              <LinkedIn alt="LinkedIn" />
             </a>
 
             <a
               href="https://www.facebook.com/Stray-Vyrje-Co-DA-Advokatfirma-124511097625943/"
               target="_blank"
+              rel="noreferrer"
             >
-              <Facebook />
+              <Facebook alt="Facebook" />
             </a>
           </Logos>
         </Bar>
         <Logos>
-          <a href="http://www.iurisgal.com" target="_blank">
-            <img src={logo2} />
+          <a href="http://www.iurisgal.com" target="_blank" rel="noreferrer">
+            <img src={logo2} alt="iurisgal" />
           </a>
-          <a href="http://www.miljofyrtarn.no " target="_blank">
-            <img src={logo3} />
+          <a
+            href="http://www.miljofyrtarn.no "
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={logo3} alt="Miljofyrtarn" />
           </a>
         </Logos>
       </Info>
