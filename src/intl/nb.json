@@ -13,6 +13,13 @@
       "p1": "Vi arbeider bl.a. mye med arbeids-, kontrakts- og selskapsrett, og har betydelig prosedyreerfaring.",
       "p2": "Som klient hos Stray Vyrje møter du løsningsorienterte advokater, som er dedikerte og tilgjengelige. Vi har omfattende erfaring innenfor fagområdene sport, media og immaterialrett.",
       "p3": "Kontakt en av våre advokater i dag, så forteller vi mer om hva vi kan oppnå sammen."
+    },
+    "byline": {
+      "1": "Stray Vyrje & Co DA Advokatfirma",
+      "2": "Drammensveien 123",
+      "3": "Postboks 520 Skøyen, 0214 Oslo ",
+      "4": "23 08 50 10",
+      "5": "post@svco.no"
     }
   },
   "contactPage": {
@@ -21,7 +28,7 @@
     "contactInformationTitle": "Kontaktinformasjon",
     "firmInformationTitle": "Firmainformasjon",
     "vatNumberLabel": "Org nummer",
-    "vatNumberValue": "976570693",
+    "vatNumberValue": "976 570 693 MVA",
     "mapTitle": "Her finner du oss",
     "openingHoursTitle": "Åpningstid",
     "openingHoursP1": "Sentralbord betjenes ukedager mellom kl. 09.00 - 12.30 og 13.00 - 17.00",

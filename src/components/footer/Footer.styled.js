@@ -14,15 +14,15 @@ export const StyledFooter = styled.footer`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  /* flex-direction: column-reverse; */
 
   @media ${device.laptop} {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 100px;
+    grid-column-gap: 100px; */
     padding: 0 ${spacing.xxlarge};
   }
 `
@@ -30,12 +30,13 @@ export const Container = styled.div`
 export const Section = styled.div`
   margin-bottom: ${spacing.xxlarge};
 
-  &:first-child {
+  /* &:first-child {
     margin: 0;
-  }
+  } */
   p {
     color: ${colors.textInverted};
     ${StyledText({ fontSize: FONT_SIZE.SMALL })};
+    margin-bottom: 0;
   }
 `
 
@@ -134,6 +135,10 @@ export const Info = styled.div`
 
     span {
       padding: 0 10px;
+    }
+
+    span:first-child {
+      padding: 0 10px 0 0;
     }
 
     a {

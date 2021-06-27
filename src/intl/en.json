@@ -13,6 +13,13 @@
       "p1": "Areas of actuation comprises of Labour, Contract and Corporate Law. In addition our lawyers have significant experience with negotiation and litigation.",
       "p2": "As a client with Stray Vyrje you will meet solution-oriented lawyers that are dedicated and available.",
       "p3": "Contact one of our partners today, to explore what we can achieve together."
+    },
+    "byline": {
+      "1": "Stray Vyrje & Co DA Advokatfirma",
+      "2": "Drammensveien 123",
+      "3": "Box 520 Skøyen, N-0214 Oslo, Norway",
+      "4": "(+47) 23 08 50 10",
+      "5": "post@svco.no"
     }
   },
   "contactPage": {
@@ -21,7 +28,7 @@
     "contactInformationTitle": "Contact information",
     "firmInformationTitle": "Firm information",
     "vatNumberLabel": "VAT number",
-    "vatNumberValue": "976570693",
+    "vatNumberValue": "976 570 693 MVA",
     "mapTitle": "You can find us here",
     "openingHoursTitle": "Opening hours",
     "openingHoursP1": "Switchboard is served on weekdays between 09.00 - 12.30 and 13.00 - 17.00",

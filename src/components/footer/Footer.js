@@ -44,7 +44,7 @@ const Footer = ({ intl }) => {
             </p>
           </SectionContent>
         </Section>
-        <Section>
+        {/* <Section>
           <SectionTitle as="h3">
             <FormattedMessage id="contactForm.title" />
           </SectionTitle>
@@ -76,14 +76,25 @@ const Footer = ({ intl }) => {
               <Button type="submit">Send</Button>
             </form>
           </SectionContent>
-        </Section>
+        </Section> */}
       </Container>
       <Info>
         <Bar>
-          <span>Stray Vyrje & Co DA Advokatfirma</span>
-          <span>Drammensveien 123 Postboks 520 Skøyen, 0214 Oslo </span>
-          <span>(+47) 23 08 50 10</span>
-          <span>post@svco.no</span>
+          <span>
+            <FormattedMessage id="footer.byline.1" />
+          </span>
+          <span>
+            <FormattedMessage id="footer.byline.2" />
+          </span>
+          <span>
+            <FormattedMessage id="footer.byline.3" />
+          </span>
+          <span>
+            <FormattedMessage id="footer.byline.4" />
+          </span>
+          <span>
+            <FormattedMessage id="footer.byline.5" />
+          </span>
           <Logos>
             <a
               href="https://www.linkedin.com/company/strayvyrje-&-co-da-advokatfirma/"

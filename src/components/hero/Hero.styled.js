@@ -9,7 +9,7 @@ import backgroundImage from "../../images/oaktree.jpg"
 
 export const StyledHero = styled.div`
   position: relative;
-  height: 70vh;
+  height: 90vh;
 
   background: ${colors.primary};
   background-image: ${`url(${backgroundImage})`};
@@ -55,6 +55,19 @@ export const Card = styled.div`
   position: relative;
   z-index: 2;
   max-width: 800px;
+  text-align: center;
+
+  @media ${device.laptop} {
+    text-align: left;
+  }
+`
+
+export const Logo = styled.img`
+  max-width: 140px;
+
+  @media ${device.laptop} {
+    max-width: 200px;
+  }
 `
 
 export const Title = styled.h1`
@@ -79,24 +92,13 @@ export const Actions = styled.div`
 
   @media ${device.laptop} {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: ${spacing.xxlarge};
   }
 `
 
 export const Action = styled(Link)`
-  /* color: ${colors.textInverted};
-  text-decoration: none;
-  padding: 6px 12px;
-  text-transform: uppercase;
-  border-bottom: 2px solid ${colors.highlight};
-  font-weight: 500;
-  letter-spacing: 1px;
   ${StyledText({ fontSize: FONT_SIZE.TEXT })};
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px; */
-
   color: ${colors.textInverted};
   text-decoration: none;
   padding: 6px 12px;
@@ -139,5 +141,6 @@ export const Action = styled(Link)`
 
   @media ${device.laptop} {
     margin: 0;
+    font-size: ${FONT_SIZE.HEADING_6};
   }
 `

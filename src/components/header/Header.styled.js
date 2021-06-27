@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { colors } from "../../utils/colors"
 import { spacing } from "../../utils/spacing"
 import { device } from "../../utils/mediaqueries"
+import { Link } from "gatsby"
 
 export const StyledHeader = styled.header`
   position: relative;
@@ -34,7 +35,10 @@ export const Container = styled.div`
   }
 `
 
+export const LogoLink = styled(Link)``
+
 export const Logo = styled.img`
+  display: ${props => props?.$isHomePage && "none"};
   float: left;
   max-width: 120px;
   margin: 0;
